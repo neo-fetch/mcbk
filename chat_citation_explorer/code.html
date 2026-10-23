@@ -1,0 +1,593 @@
+<!DOCTYPE html>
+
+<html lang="en"><head><meta charset="utf-8"/><meta content="width=device-width, initial-scale=1.0" name="viewport"/><link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&amp;family=JetBrains+Mono:wght@400;500;600&amp;display=swap" rel="stylesheet"/><link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/><style>@layer base{html,body{margin:0;padding:0;}body{overscroll-behavior:none;}main>:first-child{margin-top:0!important;}main>:last-child{margin-bottom:0!important;}}::-webkit-scrollbar{display:none;}</style><script src="https://cdn.tailwindcss.com"></script><script id="tailwind-config">tailwind.config={darkMode:"class",theme:{extend:{colors:{"inverse-primary":"#b2c5ff","on-secondary-fixed-variant":"#004b73","surface-container-highest":"#dae2fd","surface-variant":"#dae2fd","inverse-on-surface":"#eef0ff","on-primary":"#ffffff","tertiary-fixed-dim":"#7bd0ff","on-error":"#ffffff","secondary-fixed":"#cce5ff","on-tertiary":"#ffffff","on-secondary":"#ffffff","error":"#ba1a1a","on-primary-fixed":"#001849","background":"#faf8ff","primary":"#000d2f","on-surface":"#131b2e","on-tertiary-fixed-variant":"#004c69","tertiary-container":"#002839","on-primary-container":"#738aca","primary-fixed":"#dae2ff","inverse-surface":"#283044","secondary-fixed-dim":"#93ccff","primary-container":"#00205b","outline-variant":"#c5c6d1","on-error-container":"#93000a","surface-container":"#eaedff","outline":"#757681","on-secondary-container":"#00476e","on-primary-fixed-variant":"#2d447f","on-surface-variant":"#444650","tertiary-fixed":"#c4e7ff","secondary-container":"#5bb8fe","surface-container-lowest":"#ffffff","surface-dim":"#d2d9f4","on-tertiary-container":"#0096ca","secondary":"#006398","surface":"#faf8ff","primary-fixed-dim":"#b2c5ff","surface-tint":"#455c99","error-container":"#ffdad6","surface-bright":"#faf8ff","on-tertiary-fixed":"#001e2c","surface-container-low":"#f2f3ff","on-secondary-fixed":"#001d31","on-background":"#131b2e","surface-container-high":"#e2e7ff","tertiary":"#00111b"},borderRadius:{DEFAULT:"0.125rem",lg:"0.25rem",xl:"0.5rem",full:"0.75rem"},spacing:{"space-xl":"1.5rem","space-md":"0.75rem",margin:"1rem","margin-lg":"2rem","space-sm":"0.5rem","space-2xl":"2rem","space-lg":"1rem",gutter:"1rem","space-xs":"0.25rem","gutter-lg":"1.5rem"},fontFamily:{"code-md":["JetBrains Mono"],"body-md":["Inter"],"body-sm":["Inter"],"label-sm":["Inter"],"headline-sm":["Inter"],"code-sm":["JetBrains Mono"],"code-lg":["JetBrains Mono"],"body-lg":["Inter"],"display-lg":["Inter"],"headline-lg":["Inter"],"label-md":["Inter"],"headline-md":["Inter"]},fontSize:{"code-md":["0.75rem",{lineHeight:"1.125rem",letterSpacing:"-0.005em",fontWeight:"400"}],"body-md":["0.875rem",{lineHeight:"1.25rem",letterSpacing:"0em",fontWeight:"400"}],"body-sm":["0.75rem",{lineHeight:"1rem",letterSpacing:"0em",fontWeight:"400"}],"label-sm":["0.6875rem",{lineHeight:"0.875rem",letterSpacing:"0.04em",fontWeight:"600"}],"headline-sm":["1.125rem",{lineHeight:"1.5rem",letterSpacing:"-0.01em",fontWeight:"600"}],"code-sm":["0.6875rem",{lineHeight:"1rem",letterSpacing:"0em",fontWeight:"400"}],"code-lg":["0.875rem",{lineHeight:"1.375rem",letterSpacing:"-0.01em",fontWeight:"500"}],"body-lg":["1rem",{lineHeight:"1.5rem",letterSpacing:"-0.005em",fontWeight:"400"}],"display-lg":["2.25rem",{lineHeight:"2.75rem",letterSpacing:"-0.025em",fontWeight:"700"}],"headline-lg":["1.75rem",{lineHeight:"2.25rem",letterSpacing:"-0.02em",fontWeight:"600"}],"label-md":["0.8125rem",{lineHeight:"1.125rem",letterSpacing:"0.01em",fontWeight:"500"}],"headline-md":["1.375rem",{lineHeight:"1.75rem",letterSpacing:"-0.015em",fontWeight:"600"}]}}}}</script></head><body class="bg-surface font-body-md text-body-md text-on-surface antialiased"><header class="fixed top-0 left-0 right-0 z-50 bg-surface-container-lowest/95 backdrop-blur-md shadow-[0_1px_8px_rgba(0,0,0,0.04)]"><div class="w-full bg-primary-container text-on-primary px-gutter h-6 flex items-center justify-between font-code-sm text-code-sm uppercase tracking-wider"><div class="flex items-center gap-space-xs"><span class="material-symbols-outlined text-[14px] text-secondary-container">lock</span><span>AIRBUS INTERNAL - RESTRICTED // ITAR &amp; EAR CONTROLLED DATA ENCLAVE</span></div><div class="flex items-center gap-space-md"><span class="flex items-center gap-space-xs text-surface-container"><span class="w-1.5 h-1.5 rounded-full bg-secondary-container"></span>ZONE: EU-CENTRAL-AIRBUS-CORE</span><span class="text-primary-fixed">REF: AIR-SEC-2025-A350</span></div></div><div class="h-20 w-full px-gutter flex items-center justify-between gap-space-lg"><div class="flex items-center gap-space-lg"><div class="flex items-center gap-space-md"><img alt="Airbus Agent Studio Logo" class="h-8 w-auto object-contain" src="https://lh3.googleusercontent.com/aida/AEtjO1U42F9vAxNrnvNM_6vr5UaHonk2FTi22uynWRL4ewShj1csQFImlPzhe6ksFblYX69KFi92z6LH40jA5txodF6h-ZD_4odhb_1sz77m0me3hCIJ5n6KkTFlWbD2LxjZXxE42WbhF69is1HheETI70kEbcckzUKVKpqim4HWj8l9EERQe4uY-Ee3PIbGlJKvoEWOtO79dswi1fNqINhZh-tPOiTb7Uy-tFLrkWceBb_4MsYUb7GE-M0EQl0"/><div class="flex flex-col"><span class="font-headline-sm text-headline-sm text-primary tracking-tight font-bold leading-none">AGENT STUDIO</span><span class="font-label-sm text-label-sm text-on-surface-variant uppercase tracking-widest">Aerospace Systems &amp; Ops</span></div></div><div class="hidden xl:flex items-center gap-space-xs px-space-sm py-space-xs bg-surface-container-low rounded-lg"><span class="material-symbols-outlined text-[16px] text-secondary">cloud_done</span><span class="font-code-sm text-code-sm text-on-surface-variant font-medium">GCP europe-west3 (Frankfurt)</span></div></div><div class="flex-1 max-w-xl hidden md:block"><div class="relative flex items-center"><span class="material-symbols-outlined absolute left-space-md text-outline text-[18px]">search</span><input class="w-full pl-10 pr-space-md py-space-xs bg-surface-container-low text-on-surface font-body-sm text-body-sm placeholder:text-outline rounded-lg focus:outline-none focus:bg-surface-container-lowest" placeholder="Search certified agents, prompts, A350 telemetry &amp; flight specs (Ctrl + K)..." type="text"/><span class="absolute right-space-sm font-code-sm text-code-sm text-outline px-space-xs py-0.5 bg-surface-container-high rounded">/</span></div></div><div class="flex items-center gap-space-lg"><div class="hidden lg:flex items-center gap-space-md px-space-md py-space-xs bg-surface-container-low rounded-lg font-code-sm text-code-sm"><div class="flex items-center gap-1.5"><span class="w-2 h-2 rounded-full bg-secondary"></span><span class="text-on-surface-variant">Cloud Run</span></div><div class="flex items-center gap-1.5"><span class="w-2 h-2 rounded-full bg-secondary-container"></span><span class="text-on-surface-variant">Vertex AI</span></div><div class="flex items-center gap-1.5"><span class="w-2 h-2 rounded-full bg-secondary"></span><span class="text-on-surface-variant">Postgres IAM</span></div></div><div class="flex items-center gap-space-md pl-space-sm"><div class="hidden sm:flex flex-col text-right"><span class="font-label-md text-label-md text-primary font-semibold leading-tight">m.deshpande@airbus.com</span><span class="font-label-sm text-label-sm text-on-surface-variant">Engineering Lead • Workspace SSO</span></div><div class="w-8 h-8 rounded-full bg-primary flex items-center justify-center"><span class="material-symbols-outlined text-on-primary text-[18px]">person</span></div></div></div></div></header><aside class="fixed left-0 top-26 h-[calc(100vh-6.5rem)] w-64 bg-surface-container-lowest shadow-[0_1px_8px_rgba(0,0,0,0.04)] z-40 flex flex-col justify-between py-space-md"><div class="flex flex-col gap-space-xs px-space-sm"><div class="px-space-md py-space-xs font-label-sm text-label-sm text-outline uppercase tracking-wider">Enterprise Console</div><nav class="flex flex-col gap-1" data-active-classes="bg-primary-container text-on-primary font-semibold shadow-sm"><a class="flex items-center gap-space-md px-space-md py-space-sm rounded-lg text-on-surface-variant hover:bg-surface-container-high hover:text-on-surface transition-colors" data-path="agent-catalog" href="#"><span class="material-symbols-outlined text-[20px]">hub</span><span class="font-body-md text-body-md">Agent Catalog</span></a><a class="flex items-center gap-space-md px-space-md py-space-sm rounded-lg text-on-surface-variant hover:bg-surface-container-high hover:text-on-surface transition-colors" data-path="agent-builder" href="#"><span class="material-symbols-outlined text-[20px]">account_tree</span><span class="font-body-md text-body-md">Agent Builder</span></a><a class="flex items-center gap-space-md px-space-md py-space-sm rounded-lg text-on-surface-variant hover:bg-surface-container-high hover:text-on-surface transition-colors" data-path="chat-reasoning" href="#"><span class="material-symbols-outlined text-[20px]">psychology</span><span class="font-body-md text-body-md">Chat &amp; Reasoning</span></a><a class="flex items-center gap-space-md px-space-md py-space-sm rounded-lg text-on-surface-variant hover:bg-surface-container-high hover:text-on-surface transition-colors" data-path="interactive-dashboards" href="#"><span class="material-symbols-outlined text-[20px]">monitoring</span><span class="font-body-md text-body-md">Interactive Dashboards</span></a><a class="flex items-center gap-space-md px-space-md py-space-sm rounded-lg text-on-surface-variant hover:bg-surface-container-high hover:text-on-surface transition-colors" data-path="audit-telemetry" href="#"><span class="material-symbols-outlined text-[20px]">verified_user</span><span class="font-body-md text-body-md">Audit &amp; Telemetry</span></a></nav><div class="mt-space-md px-space-md py-space-xs font-label-sm text-label-sm text-outline uppercase tracking-wider">Certification Enclaves</div><div class="flex flex-col gap-1"><a class="flex items-center gap-space-md px-space-md py-space-sm rounded-lg text-on-surface-variant hover:bg-surface-container-high hover:text-on-surface transition-colors" data-path="compliance-records" href="#"><span class="material-symbols-outlined text-[20px]">fact_check</span><span class="font-body-md text-body-md">DO-178C Verification</span></a><a class="flex items-center gap-space-md px-space-md py-space-sm rounded-lg text-on-surface-variant hover:bg-surface-container-high hover:text-on-surface transition-colors" data-path="flight-test-telemetry" href="#"><span class="material-symbols-outlined text-[20px]">flight</span><span class="font-body-md text-body-md">Flight Test Telemetry</span></a></div></div><div class="px-space-md py-space-sm mx-space-sm bg-surface-container-low rounded-lg"><div class="flex items-center justify-between mb-1"><span class="font-label-sm text-label-sm text-outline uppercase">Cluster Quota</span><span class="font-code-sm text-code-sm text-secondary font-medium">82.4%</span></div><div class="w-full bg-surface-container-high h-1.5 rounded-full overflow-hidden"><div class="bg-primary-container h-full w-[82.4%]"></div></div><div class="mt-space-xs flex justify-between font-code-sm text-code-sm text-on-surface-variant"><span>A100-80GB: 16/20</span><span>Node OK</span></div></div></aside><div class="pl-64"><main class="w-full pt-26 bg-surface px-gutter"><div class="flex flex-col w-full">
+<!-- Interactive Chat & Citation Reasoning Workspace -->
+<div class="flex flex-col w-full gap-space-md pb-space-2xl">
+<!-- Top Mission Header & Telemetry Context Rail -->
+<section class="w-full bg-surface-container-lowest rounded-lg p-space-md shadow-sm flex flex-col xl:flex-row xl:items-center xl:justify-between gap-space-md">
+<!-- Left: Agent Title & Identity Metadata -->
+<div class="flex flex-col md:flex-row md:items-center gap-space-md">
+<div class="flex items-center gap-space-sm">
+<div class="w-10 h-10 rounded-lg bg-primary-container flex items-center justify-center text-secondary-container">
+<span class="material-symbols-outlined text-[24px]">troubleshoot</span>
+</div>
+<div class="flex flex-col">
+<div class="flex items-center gap-space-xs">
+<span class="font-headline-sm text-headline-sm text-primary font-bold">A350 Maintenance Dispatch Agent</span>
+<span class="px-space-xs py-0.5 rounded bg-surface-container font-code-sm text-code-sm text-on-surface font-semibold">v2.4</span>
+</div>
+<div class="flex items-center gap-space-sm font-label-sm text-label-sm text-on-surface-variant">
+<span class="text-error font-bold uppercase tracking-wider flex items-center gap-1">
+<span class="w-1.5 h-1.5 rounded-full bg-error animate-pulse"></span>
+                RESTRICTED // AIRBUS OPERATIONS
+              </span>
+<span>•</span>
+<span class="font-code-sm text-code-sm text-outline">GCS JSONL: sess_9941a8</span>
+</div>
+</div>
+</div>
+<div class="h-8 w-px bg-surface-container-high hidden md:block"></div>
+<!-- Engine & Enclave specs -->
+<div class="flex items-center gap-space-md bg-surface-container-low px-space-md py-space-xs rounded-lg">
+<div class="flex flex-col">
+<span class="font-label-sm text-label-sm text-outline">Runtime Engine</span>
+<span class="font-code-sm text-code-sm font-medium text-primary flex items-center gap-1">
+<span class="material-symbols-outlined text-[14px] text-secondary">memory</span>
+              Gemini 1.5 Pro (ADC Vertex)
+            </span>
+</div>
+<div class="w-px h-6 bg-surface-variant"></div>
+<div class="flex flex-col">
+<span class="font-label-sm text-label-sm text-outline">Isolation</span>
+<span class="font-code-sm text-code-sm font-medium text-on-surface">Cloud Run /tmp LRU</span>
+</div>
+</div>
+</div>
+<!-- Center & Right: Mode Switcher & Session Controls -->
+<div class="flex flex-wrap items-center justify-between xl:justify-end gap-space-md">
+<!-- Mode Selector -->
+<div class="flex items-center p-1 bg-surface-container-low rounded-lg font-label-md text-label-md">
+<button class="px-space-md py-1.5 rounded bg-primary-container text-on-primary font-medium shadow-sm transition-all flex items-center gap-1.5" id="mode-std">
+<span class="material-symbols-outlined text-[16px]">chat</span>
+            Standard Q&amp;A
+          </button>
+<button class="px-space-md py-1.5 rounded text-on-surface-variant hover:text-on-surface hover:bg-surface-container transition-all flex items-center gap-1.5" id="mode-dash">
+<span class="material-symbols-outlined text-[16px]">dashboard_customize</span>
+            Dashboard Mode
+          </button>
+<button class="px-space-md py-1.5 rounded text-on-surface-variant hover:text-on-surface hover:bg-surface-container transition-all flex items-center gap-1.5" id="mode-replay">
+<span class="material-symbols-outlined text-[16px]">cloud_upload</span>
+            Audit Replay
+          </button>
+</div>
+<!-- Action Control Buttons -->
+<div class="flex items-center gap-space-xs">
+<button class="px-space-sm py-1.5 rounded bg-surface-container-low hover:bg-surface-container text-on-surface font-code-sm text-code-sm flex items-center gap-1 transition-colors" title="Export Transcript">
+<span class="material-symbols-outlined text-[16px] text-secondary">download</span>
+<span class="hidden sm:inline">JSONL</span>
+</button>
+<button class="px-space-sm py-1.5 rounded bg-surface-container-low hover:bg-surface-container text-on-surface font-code-sm text-code-sm flex items-center gap-1 transition-colors" title="Clear Session">
+<span class="material-symbols-outlined text-[16px] text-outline">refresh</span>
+<span class="hidden sm:inline">Reset</span>
+</button>
+<button class="px-space-md py-1.5 rounded bg-error-container text-on-error-container hover:bg-error hover:text-on-error font-label-md text-label-md font-semibold transition-colors flex items-center gap-1.5 shadow-sm" id="btn-abort">
+<span class="material-symbols-outlined text-[16px]">stop_circle</span>
+            Abort (Kill SSE)
+          </button>
+</div>
+</div>
+</section>
+<!-- Main Workspace Split: Left 60% (Chat & Execution), Right 40% (Synchronized Inspector) -->
+<div class="grid grid-cols-1 lg:grid-cols-12 gap-space-md w-full items-start">
+<!-- ================= LEFT COLUMN: CHAT & REASONING (lg:col-span-7) ================= -->
+<section class="lg:col-span-7 flex flex-col gap-space-md">
+<!-- Interactive Chat Stream Panel -->
+<div class="bg-surface-container-lowest rounded-lg shadow-sm flex flex-col overflow-hidden">
+<!-- Stream Header / Session Indicators -->
+<div class="h-10 px-space-md bg-surface-container-low flex items-center justify-between">
+<div class="flex items-center gap-space-sm">
+<span class="flex h-2 w-2 relative">
+<span class="animate-ping absolute inline-flex h-full w-full rounded-full bg-secondary-container opacity-75"></span>
+<span class="relative inline-flex rounded-full h-2 w-2 bg-secondary"></span>
+</span>
+<span class="font-code-sm text-code-sm text-primary font-medium">STREAM: /tmp/ws/agent_a350/v2.4 • event: message_update</span>
+</div>
+<div class="flex items-center gap-space-md font-code-sm text-code-sm text-on-surface-variant">
+<span>Turn 4/25</span>
+<span>Thinking: Level 3 (Deep)</span>
+</div>
+</div>
+<!-- Message History Container -->
+<div class="p-space-lg flex flex-col gap-space-xl overflow-y-auto max-h-[720px]">
+<!-- 1. Dispatch Engineer User Message -->
+<div class="flex items-start gap-space-md">
+<div class="w-8 h-8 rounded-lg bg-surface-container-high flex items-center justify-center flex-shrink-0 text-primary">
+<span class="material-symbols-outlined text-[20px]">engineering</span>
+</div>
+<div class="flex flex-col gap-space-xs flex-1">
+<div class="flex items-center justify-between">
+<span class="font-label-md text-label-md text-primary font-bold">M. Deshpande (Avionics Lead)</span>
+<span class="font-code-sm text-code-sm text-outline">10:42:19 UTC</span>
+</div>
+<div class="bg-surface-container-low p-space-md rounded-lg text-on-surface font-body-md text-body-md shadow-sm">
+                  Investigate recurring intermittent APU generator trip warnings reported on <span class="font-code-md text-code-md px-1 bg-surface-container rounded font-bold text-primary">MSN 0418</span> over the last 90 days. Cross-reference AMM Chapter 24 troubleshooting with fleet maintenance logs.
+                </div>
+<div class="flex items-center gap-space-sm text-outline font-code-sm text-code-sm">
+<span>Scope: MSN 0418</span>
+<span>•</span>
+<span>Corpus: A350-941 AMM Revision 78</span>
+</div>
+</div>
+</div>
+<!-- 2. Agent Execution Timeline (Collapsible Accordion of Tool Calls) -->
+<div class="flex items-start gap-space-md">
+<div class="w-8 h-8 rounded-lg bg-primary-container flex items-center justify-center flex-shrink-0 text-on-primary shadow-sm">
+<span class="material-symbols-outlined text-[18px]">neurology</span>
+</div>
+<div class="flex flex-col gap-space-md flex-1 min-w-0">
+<div class="flex items-center justify-between">
+<div class="flex items-center gap-space-xs">
+<span class="font-label-md text-label-md text-primary font-bold">A350 Dispatch Engine</span>
+<span class="px-space-xs py-0.5 rounded bg-surface-container font-code-sm text-code-sm text-secondary font-medium">Execution Graph (3 Steps)</span>
+</div>
+<span class="font-code-sm text-code-sm text-secondary flex items-center gap-1">
+<span class="material-symbols-outlined text-[14px]">timer</span>
+                    Total runtime: 184ms
+                  </span>
+</div>
+<!-- Accordion of Tool Steps -->
+<div class="flex flex-col gap-space-xs bg-surface-container-low p-space-xs rounded-lg">
+<!-- Step 1: Document Search -->
+<div class="bg-surface-container-lowest rounded-lg p-space-sm flex flex-col gap-space-xs shadow-sm">
+<div class="flex items-center justify-between cursor-pointer" onclick="document.getElementById('step-1-details').classList.toggle('hidden')">
+<div class="flex items-center gap-space-xs">
+<span class="w-5 h-5 rounded-full bg-secondary-container/30 text-secondary flex items-center justify-center font-code-sm text-code-sm font-bold">1</span>
+<span class="font-code-md text-code-md text-primary font-bold">tool:search_documents()</span>
+<span class="font-code-sm text-code-sm text-on-surface-variant truncate max-w-xs">query="intermittent APU generator trip AMM 24", k=5</span>
+</div>
+<div class="flex items-center gap-space-sm">
+<span class="px-space-xs py-0.5 rounded bg-surface-container text-on-surface-variant font-code-sm text-code-sm">Vertex RAG Engine</span>
+<span class="material-symbols-outlined text-outline text-[18px]">expand_more</span>
+</div>
+</div>
+<div class="pt-space-xs flex flex-col gap-space-xs font-code-sm text-code-sm text-on-surface-variant" id="step-1-details">
+<div class="p-space-xs bg-surface-container-low rounded">
+<span class="text-primary font-medium">Found 3 relevant chunks:</span> AMM_Chapter_24_Electrical_Power.md (p.114 score: 0.942, p.118 score: 0.887, p.122 score: 0.814).
+                      </div>
+</div>
+</div>
+<!-- Step 2: DuckDB Parquet Query -->
+<div class="bg-surface-container-lowest rounded-lg p-space-sm flex flex-col gap-space-xs shadow-sm">
+<div class="flex items-center justify-between cursor-pointer" onclick="document.getElementById('step-2-details').classList.toggle('hidden')">
+<div class="flex items-center gap-space-xs">
+<span class="w-5 h-5 rounded-full bg-secondary-container/30 text-secondary flex items-center justify-center font-code-sm text-code-sm font-bold">2</span>
+<span class="font-code-md text-code-md text-primary font-bold">tool:query_table()</span>
+<span class="font-code-sm text-code-sm text-on-surface-variant truncate max-w-xs">SELECT date, flight_cycle, fault_code... FROM fleet_logs</span>
+</div>
+<div class="flex items-center gap-space-sm">
+<span class="px-space-xs py-0.5 rounded bg-surface-container text-secondary font-code-sm text-code-sm font-bold">DuckDB (42ms)</span>
+<span class="material-symbols-outlined text-outline text-[18px]">expand_more</span>
+</div>
+</div>
+<div class="pt-space-xs flex flex-col gap-space-xs font-code-sm text-code-sm text-on-surface-variant" id="step-2-details">
+<div class="p-space-xs bg-surface-container-low rounded overflow-x-auto">
+<span class="text-primary font-semibold">In-process DuckDB executed:</span>
+<code class="block text-secondary mt-0.5">SELECT date, flight_cycle, fault_code, sensor_val FROM fleet_logs WHERE msn = '0418' AND fault_code LIKE '%GEN_TRIP%' ORDER BY date DESC LIMIT 10</code>
+<div class="mt-1 text-on-surface">Result: 7 rows loaded into parquet cache. Zero memory overhead beyond scratch heap.</div>
+</div>
+</div>
+</div>
+<!-- Step 3: Document Reader Slice -->
+<div class="bg-surface-container-lowest rounded-lg p-space-sm flex flex-col gap-space-xs shadow-sm">
+<div class="flex items-center justify-between cursor-pointer" onclick="document.getElementById('step-3-details').classList.toggle('hidden')">
+<div class="flex items-center gap-space-xs">
+<span class="w-5 h-5 rounded-full bg-secondary-container/30 text-secondary flex items-center justify-center font-code-sm text-code-sm font-bold">3</span>
+<span class="font-code-md text-code-md text-primary font-bold">tool:read_document()</span>
+<span class="font-code-sm text-code-sm text-on-surface-variant">docId="doc_amm_24", fromPage=114, toPage=116</span>
+</div>
+<div class="flex items-center gap-space-sm">
+<span class="px-space-xs py-0.5 rounded bg-surface-container text-on-surface font-code-sm text-code-sm">Markdown Stream</span>
+<span class="material-symbols-outlined text-outline text-[18px]">expand_more</span>
+</div>
+</div>
+<div class="pt-space-xs flex flex-col gap-space-xs font-code-sm text-code-sm text-on-surface-variant" id="step-3-details">
+<div class="p-space-xs bg-surface-container-low rounded">
+                        Extracted wiring schematics, harness impedance tolerances, and terminal block TB-2401 pinout specifications.
+                      </div>
+</div>
+</div>
+</div>
+<!-- 3. Synthesized Agent Response with Interactive Citations -->
+<div class="bg-surface-container-lowest p-space-lg rounded-lg shadow-sm flex flex-col gap-space-md">
+<div class="flex items-center justify-between pb-space-xs">
+<span class="font-label-md text-label-md text-primary font-semibold flex items-center gap-1.5">
+<span class="material-symbols-outlined text-[16px] text-secondary">verified</span>
+                      Flight Certification Diagnostic Synthesis
+                    </span>
+<span class="font-code-sm text-code-sm text-outline">Confidence: 99.1%</span>
+</div>
+<div class="font-body-md text-body-md text-on-surface space-y-space-sm leading-relaxed">
+<p>
+                      Analysis of fleet telemetry reveals that <strong class="text-primary font-semibold">MSN 0418</strong> has recorded <strong>7 intermittent APU Generator trip events</strong> over the past 90 days. Every occurrence correlates with flight descent phases under high ambient humidity, logging ECAM warning <span class="font-code-md text-code-md bg-surface-container px-1 py-0.5 rounded text-primary">APU GEN FAULT (ECAM 24-21-04)</span>.
+                    </p>
+<div class="p-space-md bg-surface-container-low rounded-lg space-y-space-xs">
+<div class="font-label-sm text-label-sm text-primary uppercase font-bold tracking-wider">Root Cause Correlation:</div>
+<p>
+                        According to 
+                        <button class="inline-flex items-center gap-1 px-1.5 py-0.5 rounded bg-primary text-on-primary font-code-sm text-code-sm font-semibold hover:bg-secondary transition-colors cursor-pointer" onclick="inspectCitation('doc_amm')">
+<span class="material-symbols-outlined text-[13px]">menu_book</span>
+                          [AMM 24:114]
+                        </button>, 
+                        fault code <strong>24-21-04</strong> isolates primarily to differential current unbalance in the Generator Control Unit (GCU) harness or micro-corrosion at connector <span class="font-code-sm text-code-sm text-primary font-semibold">EN-9921-A</span>.
+                      </p>
+<p>
+                        Furthermore, the DuckDB telemetry query across parquet logs highlights that the most severe thermal excursion occurred on 
+                        <button class="inline-flex items-center gap-1 px-1.5 py-0.5 rounded bg-secondary-container text-on-primary font-code-sm text-code-sm font-semibold hover:bg-secondary transition-colors cursor-pointer" onclick="inspectCitation('duckdb_table')">
+<span class="material-symbols-outlined text-[13px]">table_rows</span>
+                          [fleet_logs:row_4]
+                        </button>, 
+                        where GCU Terminal Block TB-2401 exceeded nominal operating thresholds by <strong>14.2°C</strong> during cycle #1,208.
+                      </p>
+</div>
+<div class="font-label-md text-label-md text-primary font-semibold pt-space-xs">Recommended Dispatch Mitigation:</div>
+<ul class="list-disc list-inside space-y-1 text-on-surface-variant font-body-sm text-body-sm">
+<li>Perform visual and pin-retention inspection on harness connector EN-9921-A per AMM Task 24-21-00-200-801.</li>
+<li>Validate loop resistance of current transformers CT1/CT2 (must be &lt; 0.85 Ω).</li>
+<li>Review MEL Item 24-21-01 for auxiliary dispatch eligibility before ferry departure.</li>
+</ul>
+</div>
+<!-- Mode Transition / Deep Action Banner -->
+<div class="mt-space-sm pt-space-md bg-surface-container p-space-md rounded-lg flex flex-col sm:flex-row items-start sm:items-center justify-between gap-space-md">
+<div class="flex items-center gap-space-sm">
+<div class="w-8 h-8 rounded bg-secondary-container flex items-center justify-center text-on-primary">
+<span class="material-symbols-outlined text-[18px]">query_stats</span>
+</div>
+<div class="flex flex-col">
+<span class="font-label-md text-label-md text-primary font-bold">Synthesize Interactive Dashboard</span>
+<span class="font-body-sm text-body-sm text-on-surface-variant">Compile DuckDB metrics, trip timeline &amp; sensor thermals into ECharts artifact</span>
+</div>
+</div>
+<button class="px-space-md py-2 rounded bg-primary hover:bg-secondary text-on-primary font-label-md text-label-md font-semibold transition-all flex items-center gap-1.5 shadow-sm whitespace-nowrap" onclick="alert('Switching runtime to Dashboard Builder Mode...')">
+<span>Generate Fault Dashboard</span>
+<span class="material-symbols-outlined text-[16px]">arrow_forward</span>
+</button>
+</div>
+</div>
+</div>
+</div>
+</div>
+<!-- Bottom Prompt Bar with Monospaced Tokens & Quick Context Hooks -->
+<div class="p-space-md bg-surface-container-low flex flex-col gap-space-xs">
+<div class="flex items-center gap-space-xs overflow-x-auto pb-1">
+<span class="font-label-sm text-label-sm text-outline uppercase font-semibold">Active Context:</span>
+<span class="px-space-xs py-0.5 rounded bg-surface-container-lowest font-code-sm text-code-sm text-primary font-semibold flex items-center gap-1 shadow-sm">
+<span class="material-symbols-outlined text-[13px] text-secondary">database</span> @table:fleet_logs
+              </span>
+<span class="px-space-xs py-0.5 rounded bg-surface-container-lowest font-code-sm text-code-sm text-primary font-semibold flex items-center gap-1 shadow-sm">
+<span class="material-symbols-outlined text-[13px] text-secondary">description</span> @doc:amm_chapter_24
+              </span>
+<span class="px-space-xs py-0.5 rounded bg-surface-container-lowest font-code-sm text-code-sm text-primary font-semibold flex items-center gap-1 shadow-sm">
+<span class="material-symbols-outlined text-[13px] text-secondary">policy</span> @guardrail:strict_citations
+              </span>
+</div>
+<div class="relative flex items-center">
+<input class="w-full pl-space-md pr-28 py-space-sm bg-surface-container-lowest rounded-lg font-body-md text-body-md text-on-surface placeholder:text-outline focus:outline-none shadow-sm" type="text" value="Plot the correlation between TB-2401 temperatures and GCU trip timestamps over flight cycles."/>
+<div class="absolute right-space-xs flex items-center gap-space-xs">
+<span class="font-code-sm text-code-sm text-outline hidden sm:inline">1.4k tokens</span>
+<button class="px-space-md py-1.5 rounded bg-primary hover:bg-secondary text-on-primary font-label-md text-label-md font-semibold transition-all flex items-center gap-1 shadow-sm">
+<span>Send</span>
+<span class="material-symbols-outlined text-[16px]">send</span>
+</button>
+</div>
+</div>
+<div class="flex items-center justify-between text-outline font-code-sm text-code-sm px-space-xs pt-1">
+<span>Vertex RAG Hybrid Index: 28 ms retrieval latency</span>
+<span>Model: gemini-1.5-pro-preview-0514</span>
+</div>
+</div>
+</div>
+</section>
+<!-- ================= RIGHT COLUMN: LIVE CITATION & DUCKDB EXPLORER (lg:col-span-5) ================= -->
+<section class="lg:col-span-5 flex flex-col gap-space-md">
+<!-- Synchronized Inspector Master Card -->
+<div class="bg-surface-container-lowest rounded-lg shadow-sm flex flex-col overflow-hidden">
+<!-- Top Inspector Tab Selector -->
+<div class="flex items-center justify-between bg-surface-container-low px-space-sm pt-space-xs">
+<div class="flex items-center gap-1">
+<button class="px-space-md py-2 rounded-t-lg bg-surface-container-lowest font-label-md text-label-md font-bold text-primary shadow-sm flex items-center gap-1.5 transition-all" id="tab-doc-btn" onclick="showTab('doc')">
+<span class="material-symbols-outlined text-[16px] text-secondary">picture_as_pdf</span>
+<span>AMM Doc [24:114]</span>
+</button>
+<button class="px-space-md py-2 rounded-t-lg text-on-surface-variant hover:text-on-surface font-label-md text-label-md font-medium flex items-center gap-1.5 transition-all" id="tab-duckdb-btn" onclick="showTab('duckdb')">
+<span class="material-symbols-outlined text-[16px]">table_view</span>
+<span>DuckDB Explorer</span>
+</button>
+<button class="px-space-md py-2 rounded-t-lg text-on-surface-variant hover:text-on-surface font-label-md text-label-md font-medium flex items-center gap-1.5 transition-all" id="tab-raw-btn" onclick="showTab('raw')">
+<span class="material-symbols-outlined text-[16px]">data_object</span>
+<span>pi JSONL</span>
+</button>
+</div>
+<div class="flex items-center gap-space-xs pb-1">
+<span class="material-symbols-outlined text-[18px] text-outline hover:text-primary cursor-pointer" title="Open in dedicated tab">open_in_new</span>
+<span class="material-symbols-outlined text-[18px] text-outline hover:text-primary cursor-pointer" title="Expand panel width">fullscreen</span>
+</div>
+</div>
+<!-- TAB CONTENT 1: DOCUMENT VIEWER (AMM Manual Page 114) -->
+<div class="flex flex-col p-space-md gap-space-md" id="tab-doc-content">
+<!-- Document Meta Bar & Page Navigation -->
+<div class="flex items-center justify-between bg-surface-container-low p-space-sm rounded-lg">
+<div class="flex items-center gap-space-xs">
+<span class="font-code-sm text-code-sm text-primary font-bold">AMM_CH24_POWER_REV78.md</span>
+<span class="px-space-xs py-0.5 rounded bg-surface-container font-label-sm text-label-sm text-outline">GCS: raw/amm/</span>
+</div>
+<div class="flex items-center gap-space-xs">
+<button class="w-6 h-6 rounded bg-surface-container-lowest flex items-center justify-center hover:bg-surface-container text-on-surface shadow-sm">
+<span class="material-symbols-outlined text-[14px]">chevron_left</span>
+</button>
+<span class="font-code-sm text-code-sm font-semibold text-primary px-space-xs">Page 114 of 320</span>
+<button class="w-6 h-6 rounded bg-surface-container-lowest flex items-center justify-center hover:bg-surface-container text-on-surface shadow-sm">
+<span class="material-symbols-outlined text-[14px]">chevron_right</span>
+</button>
+</div>
+</div>
+<!-- Rendered Technical Page Excerpt with Yellow Citation Highlight -->
+<div class="bg-surface-container-low p-space-lg rounded-lg max-h-[500px] overflow-y-auto space-y-space-md text-on-surface font-body-sm text-body-sm shadow-inner leading-relaxed">
+<div class="flex items-center justify-between pb-space-xs">
+<span class="font-code-sm text-code-sm text-outline uppercase font-semibold">Airbus Maintenance Manual • ATA Chapter 24-21-00</span>
+<span class="font-code-sm text-code-sm text-secondary font-mono">EFFECTIVITY: ALL A350-941</span>
+</div>
+<h4 class="font-headline-sm text-headline-sm text-primary font-bold">24-21-00 Main Electrical Generation - Fault Isolation</h4>
+<p class="text-on-surface-variant">
+                1. General Description: The Auxiliary Power Unit (APU) starter-generator system employs a dedicated solid-state Generator Control Unit (GCU-2400) providing voltage regulation, line contactor control, and comprehensive differential current phase protection.
+              </p>
+<!-- Yellow Highlighted Citation Box -->
+<div class="bg-yellow-100 p-space-md rounded-lg shadow-sm space-y-space-xs">
+<div class="flex items-center justify-between text-yellow-900 font-code-sm text-code-sm font-bold">
+<span class="flex items-center gap-1">
+<span class="material-symbols-outlined text-[15px]">highlight</span>
+                    CITED EXCERPT: [AMM 24:114 § 3.2.1]
+                  </span>
+<span>ANCHOR: #fault-gcu-24-21-04</span>
+</div>
+<p class="text-yellow-950 font-body-sm text-body-sm leading-normal">
+                  "Fault isolation code 24-21-04 triggers whenever the differential feeder current exceeds 1.25 Amperes RMS for a sustained period &gt; 40 ms. Root cause analysis on high-cycle airframes demonstrates micro-fretting corrosion on harness terminal block TB-2401, causing transient sensor resistance spikes during high ambient humidity descent profiles."
+                </p>
+</div>
+<!-- Technical Diagram / Pinout Box -->
+<div class="bg-surface-container-lowest p-space-md rounded-lg shadow-sm space-y-space-xs">
+<div class="flex items-center justify-between font-label-sm text-label-sm text-primary font-bold">
+<span>Terminal Block TB-2401 Pinout Specifications</span>
+<span class="text-secondary font-code-sm text-code-sm">Tolerance: ±0.05 Ω</span>
+</div>
+<div class="grid grid-cols-3 gap-space-xs pt-1 font-code-sm text-code-sm text-on-surface-variant">
+<div class="p-space-xs bg-surface-container-low rounded">
+<span class="font-bold text-primary">Pin A1 (Phase A):</span> 0.42 Ω
+                  </div>
+<div class="p-space-xs bg-surface-container-low rounded">
+<span class="font-bold text-primary">Pin B1 (Phase B):</span> 0.44 Ω
+                  </div>
+<div class="p-space-xs bg-surface-container-low rounded">
+<span class="font-bold text-primary">Pin C1 (Phase C):</span> 0.41 Ω
+                  </div>
+</div>
+</div>
+<p class="text-on-surface-variant text-[11px]">
+                Note: Ensure grounding strap bonding resistance satisfies DO-160 Section 8 lightning qualification before re-torquing locknuts to 35 in-lbs.
+              </p>
+</div>
+<!-- Page Jump Links / Metadata Footer -->
+<div class="flex items-center justify-between font-code-sm text-code-sm text-on-surface-variant pt-space-xs">
+<span class="flex items-center gap-1">
+<span class="material-symbols-outlined text-[15px] text-secondary">lock</span>
+                Hash: sha256:889df1a07e...
+              </span>
+<div class="flex items-center gap-space-sm">
+<a class="text-secondary hover:underline" href="#">Download Section PDF</a>
+<span>•</span>
+<a class="text-secondary hover:underline" href="#">View Vector Diagram</a>
+</div>
+</div>
+</div>
+<!-- TAB CONTENT 2: DUCKDB TABLE EXPLORER (fleet_logs.parquet) -->
+<div class="hidden flex-col p-space-md gap-space-md" id="tab-duckdb-content">
+<!-- SQL Run info -->
+<div class="flex items-center justify-between bg-surface-container-low p-space-sm rounded-lg font-code-sm text-code-sm">
+<div class="flex items-center gap-space-xs text-primary font-medium">
+<span class="material-symbols-outlined text-[16px] text-secondary">database</span>
+<span>Dataset: fleet_logs.parquet (MSN 0418)</span>
+</div>
+<span class="text-on-surface-variant">7 rows • 42ms runtime</span>
+</div>
+<!-- Query Table Result Display -->
+<div class="overflow-x-auto rounded-lg bg-surface-container-low">
+<table class="w-full text-left font-code-sm text-code-sm border-collapse">
+<thead>
+<tr class="bg-surface-container text-primary font-bold">
+<th class="p-space-sm">Date</th>
+<th class="p-space-sm">Flight Cycle</th>
+<th class="p-space-sm">Fault Code</th>
+<th class="p-space-sm">Terminal Temp (°C)</th>
+<th class="p-space-sm">GCU Status</th>
+</tr>
+</thead>
+<tbody class="divide-y divide-surface-container-high text-on-surface">
+<tr class="hover:bg-surface-container-lowest transition-colors">
+<td class="p-space-sm">2025-05-12</td>
+<td class="p-space-sm">#1,214</td>
+<td class="p-space-sm text-error font-semibold">GEN_TRIP_2404</td>
+<td class="p-space-sm">78.4</td>
+<td class="p-space-sm text-error font-bold">TRIPPED</td>
+</tr>
+<tr class="hover:bg-surface-container-lowest transition-colors">
+<td class="p-space-sm">2025-05-09</td>
+<td class="p-space-sm">#1,211</td>
+<td class="p-space-sm text-error font-semibold">GEN_TRIP_2404</td>
+<td class="p-space-sm">81.1</td>
+<td class="p-space-sm text-error font-bold">TRIPPED</td>
+</tr>
+<!-- Row 4 Highlighted Matching Citation -->
+<tr class="bg-yellow-100 font-bold text-yellow-950 transition-colors">
+<td class="p-space-sm flex items-center gap-1">
+<span class="w-2 h-2 rounded-full bg-secondary"></span>
+                      2025-05-02
+                    </td>
+<td class="p-space-sm">#1,208</td>
+<td class="p-space-sm text-error">GEN_TRIP_2404</td>
+<td class="p-space-sm text-error">89.2 (°C Excursion)</td>
+<td class="p-space-sm text-error">ISOLATED</td>
+</tr>
+<tr class="hover:bg-surface-container-lowest transition-colors">
+<td class="p-space-sm">2025-04-28</td>
+<td class="p-space-sm">#1,202</td>
+<td class="p-space-sm text-error font-semibold">GEN_TRIP_2401</td>
+<td class="p-space-sm">76.5</td>
+<td class="p-space-sm text-on-surface-variant">AUTO_RESET</td>
+</tr>
+<tr class="hover:bg-surface-container-lowest transition-colors">
+<td class="p-space-sm">2025-04-15</td>
+<td class="p-space-sm">#1,194</td>
+<td class="p-space-sm text-error font-semibold">GEN_TRIP_2404</td>
+<td class="p-space-sm">79.0</td>
+<td class="p-space-sm text-error font-bold">TRIPPED</td>
+</tr>
+<tr class="hover:bg-surface-container-lowest transition-colors">
+<td class="p-space-sm">2025-03-30</td>
+<td class="p-space-sm">#1,178</td>
+<td class="p-space-sm text-error font-semibold">GEN_TRIP_2404</td>
+<td class="p-space-sm">83.6</td>
+<td class="p-space-sm text-error font-bold">TRIPPED</td>
+</tr>
+<tr class="hover:bg-surface-container-lowest transition-colors">
+<td class="p-space-sm">2025-03-11</td>
+<td class="p-space-sm">#1,162</td>
+<td class="p-space-sm text-error font-semibold">GEN_TRIP_2401</td>
+<td class="p-space-sm">74.2</td>
+<td class="p-space-sm text-on-surface-variant">AUTO_RESET</td>
+</tr>
+</tbody>
+</table>
+</div>
+<!-- In-process Guardrail Info -->
+<div class="p-space-sm bg-surface-container rounded-lg font-code-sm text-code-sm text-on-surface flex items-center justify-between">
+<span class="flex items-center gap-1">
+<span class="material-symbols-outlined text-[15px] text-secondary">verified_user</span>
+                DuckDB Guardrail: Enforced Read-Only SELECT, 1000 row hard limit
+              </span>
+<span class="text-secondary font-bold">OK</span>
+</div>
+</div>
+<!-- TAB CONTENT 3: RAW PI EVENT STREAM JSONL -->
+<div class="hidden flex-col p-space-md gap-space-md font-code-sm text-code-sm" id="tab-raw-content">
+<div class="flex items-center justify-between bg-surface-container-low p-space-sm rounded-lg">
+<span class="text-primary font-bold">SSE Event Wire Log (/tmp/ws/agent_a350)</span>
+<span class="text-secondary">Chunk #14</span>
+</div>
+<div class="bg-primary-container text-on-primary p-space-md rounded-lg max-h-[460px] overflow-y-auto space-y-space-xs leading-normal">
+<div class="text-secondary-container">{"type": "message_start", "role": "assistant", "model": "gemini-1.5-pro"}</div>
+<div class="text-on-primary-container">{"type": "tool_execution_start", "tool": "search_documents", "args": {"k": 5}}</div>
+<div class="text-surface-container-highest">{"type": "tool_execution_end", "tool": "search_documents", "latency_ms": 112}</div>
+<div class="text-secondary-container">{"type": "tool_execution_start", "tool": "query_table", "engine": "duckdb"}</div>
+<div class="text-surface-container-highest">{"type": "tool_execution_end", "tool": "query_table", "rows": 7, "latency_ms": 42}</div>
+<div class="text-on-primary font-medium">{"type": "message_update", "delta": "Analysis of fleet telemetry reveals..."}</div>
+<div class="text-secondary-container">{"type": "citation_marker", "ref": "doc_amm_24", "page": 114, "anchor": "3.2.1"}</div>
+<div class="text-secondary-container">{"type": "citation_marker", "ref": "fleet_logs", "row": 4, "msn": "0418"}</div>
+<div class="text-surface-container-highest">{"type": "agent_turn_complete", "guardrails_checked": ["pii", "sql_readonly", "scope"]}</div>
+</div>
+<div class="flex items-center justify-between text-on-surface-variant">
+<span>GCS Persistence: gs://eu-west3-agents/sess_9941a8.jsonl</span>
+<span>Sync Status: ACK</span>
+</div>
+</div>
+</div>
+<!-- Telemetry & Health Quick Monitor Bar -->
+<div class="bg-surface-container-lowest p-space-md rounded-lg shadow-sm flex flex-col gap-space-sm">
+<div class="flex items-center justify-between">
+<span class="font-label-sm text-label-sm text-primary uppercase font-bold tracking-wider flex items-center gap-1.5">
+<span class="w-2 h-2 rounded-full bg-secondary"></span>
+              Enclave Telemetry &amp; System Health
+            </span>
+<span class="font-code-sm text-code-sm text-secondary font-semibold">GCP europe-west3</span>
+</div>
+<div class="grid grid-cols-3 gap-space-sm">
+<div class="p-space-sm bg-surface-container-low rounded-lg flex flex-col">
+<span class="font-label-sm text-label-sm text-outline">Cloud Run Mem</span>
+<span class="font-code-sm text-code-sm font-bold text-primary">1.8 GB / 8 GB</span>
+<div class="w-full bg-surface-container-high h-1 rounded-full mt-1">
+<div class="bg-primary h-full w-[22.5%]"></div>
+</div>
+</div>
+<div class="p-space-sm bg-surface-container-low rounded-lg flex flex-col">
+<span class="font-label-sm text-label-sm text-outline">SSE Latency</span>
+<span class="font-code-sm text-code-sm font-bold text-secondary">140 ms</span>
+<span class="font-code-sm text-code-sm text-outline">Direct streaming</span>
+</div>
+<div class="p-space-sm bg-surface-container-low rounded-lg flex flex-col">
+<span class="font-label-sm text-label-sm text-outline">Guardrails</span>
+<span class="font-code-sm text-code-sm font-bold text-primary">0 Violations</span>
+<span class="font-code-sm text-code-sm text-outline">Model Armor ON</span>
+</div>
+</div>
+</div>
+</section>
+</div>
+</div>
+<!-- Client-side Interactive Tab Handler -->
+<script>
+    function showTab(tab) {
+      const docBtn = document.getElementById('tab-doc-btn');
+      const duckBtn = document.getElementById('tab-duckdb-btn');
+      const rawBtn = document.getElementById('tab-raw-btn');
+
+      const docContent = document.getElementById('tab-doc-content');
+      const duckContent = document.getElementById('tab-duckdb-content');
+      const rawContent = document.getElementById('tab-raw-content');
+
+      // Reset tabs styling
+      [docBtn, duckBtn, rawBtn].forEach(b => {
+        b.className = 'px-space-md py-2 rounded-t-lg text-on-surface-variant hover:text-on-surface font-label-md text-label-md font-medium flex items-center gap-1.5 transition-all';
+      });
+      [docContent, duckContent, rawContent].forEach(c => {
+        c.classList.add('hidden');
+        c.classList.remove('flex');
+      });
+
+      if (tab === 'doc') {
+        docBtn.className = 'px-space-md py-2 rounded-t-lg bg-surface-container-lowest font-label-md text-label-md font-bold text-primary shadow-sm flex items-center gap-1.5 transition-all';
+        docContent.classList.remove('hidden');
+        docContent.classList.add('flex');
+      } else if (tab === 'duckdb') {
+        duckBtn.className = 'px-space-md py-2 rounded-t-lg bg-surface-container-lowest font-label-md text-label-md font-bold text-primary shadow-sm flex items-center gap-1.5 transition-all';
+        duckContent.classList.remove('hidden');
+        duckContent.classList.add('flex');
+      } else if (tab === 'raw') {
+        rawBtn.className = 'px-space-md py-2 rounded-t-lg bg-surface-container-lowest font-label-md text-label-md font-bold text-primary shadow-sm flex items-center gap-1.5 transition-all';
+        rawContent.classList.remove('hidden');
+        rawContent.classList.add('flex');
+      }
+    }
+
+    function inspectCitation(type) {
+      if (type === 'doc_amm') {
+        showTab('doc');
+      } else if (type === 'duckdb_table') {
+        showTab('duckdb');
+      }
+    }
+
+    // Abort button simulation
+    const abortBtn = document.getElementById('btn-abort');
+    if (abortBtn) {
+      abortBtn.addEventListener('click', () => {
+        abortBtn.innerHTML = '<span class="material-symbols-outlined text-[16px]">check</span> Aborted';
+        abortBtn.classList.remove('bg-error-container', 'text-on-error-container');
+        abortBtn.classList.add('bg-surface-container', 'text-on-surface-variant');
+        setTimeout(() => {
+          abortBtn.innerHTML = '<span class="material-symbols-outlined text-[16px]">stop_circle</span> Abort (Kill SSE)';
+          abortBtn.classList.add('bg-error-container', 'text-on-error-container');
+          abortBtn.classList.remove('bg-surface-container', 'text-on-surface-variant');
+        }, 2000);
+      });
+    }
+  </script>
+</div></main></div></body></html>

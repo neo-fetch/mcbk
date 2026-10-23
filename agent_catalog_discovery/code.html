@@ -1,0 +1,589 @@
+<!DOCTYPE html>
+
+<html lang="en"><head><meta charset="utf-8"/><meta content="width=device-width, initial-scale=1.0" name="viewport"/><link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&amp;family=JetBrains+Mono:wght@400;500;600&amp;display=swap" rel="stylesheet"/><link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/><style>@layer base{html,body{margin:0;padding:0;}body{overscroll-behavior:none;}main>:first-child{margin-top:0!important;}main>:last-child{margin-bottom:0!important;}}::-webkit-scrollbar{display:none;}</style><script src="https://cdn.tailwindcss.com"></script><script id="tailwind-config">tailwind.config={darkMode:"class",theme:{extend:{colors:{"inverse-primary":"#b2c5ff","on-secondary-fixed-variant":"#004b73","surface-container-highest":"#dae2fd","surface-variant":"#dae2fd","inverse-on-surface":"#eef0ff","on-primary":"#ffffff","tertiary-fixed-dim":"#7bd0ff","on-error":"#ffffff","secondary-fixed":"#cce5ff","on-tertiary":"#ffffff","on-secondary":"#ffffff","error":"#ba1a1a","on-primary-fixed":"#001849","background":"#faf8ff","primary":"#000d2f","on-surface":"#131b2e","on-tertiary-fixed-variant":"#004c69","tertiary-container":"#002839","on-primary-container":"#738aca","primary-fixed":"#dae2ff","inverse-surface":"#283044","secondary-fixed-dim":"#93ccff","primary-container":"#00205b","outline-variant":"#c5c6d1","on-error-container":"#93000a","surface-container":"#eaedff","outline":"#757681","on-secondary-container":"#00476e","on-primary-fixed-variant":"#2d447f","on-surface-variant":"#444650","tertiary-fixed":"#c4e7ff","secondary-container":"#5bb8fe","surface-container-lowest":"#ffffff","surface-dim":"#d2d9f4","on-tertiary-container":"#0096ca","secondary":"#006398","surface":"#faf8ff","primary-fixed-dim":"#b2c5ff","surface-tint":"#455c99","error-container":"#ffdad6","surface-bright":"#faf8ff","on-tertiary-fixed":"#001e2c","surface-container-low":"#f2f3ff","on-secondary-fixed":"#001d31","on-background":"#131b2e","surface-container-high":"#e2e7ff","tertiary":"#00111b"},borderRadius:{DEFAULT:"0.125rem",lg:"0.25rem",xl:"0.5rem",full:"0.75rem"},spacing:{"space-xl":"1.5rem","space-md":"0.75rem",margin:"1rem","margin-lg":"2rem","space-sm":"0.5rem","space-2xl":"2rem","space-lg":"1rem",gutter:"1rem","space-xs":"0.25rem","gutter-lg":"1.5rem"},fontFamily:{"code-md":["JetBrains Mono"],"body-md":["Inter"],"body-sm":["Inter"],"label-sm":["Inter"],"headline-sm":["Inter"],"code-sm":["JetBrains Mono"],"code-lg":["JetBrains Mono"],"body-lg":["Inter"],"display-lg":["Inter"],"headline-lg":["Inter"],"label-md":["Inter"],"headline-md":["Inter"]},fontSize:{"code-md":["0.75rem",{lineHeight:"1.125rem",letterSpacing:"-0.005em",fontWeight:"400"}],"body-md":["0.875rem",{lineHeight:"1.25rem",letterSpacing:"0em",fontWeight:"400"}],"body-sm":["0.75rem",{lineHeight:"1rem",letterSpacing:"0em",fontWeight:"400"}],"label-sm":["0.6875rem",{lineHeight:"0.875rem",letterSpacing:"0.04em",fontWeight:"600"}],"headline-sm":["1.125rem",{lineHeight:"1.5rem",letterSpacing:"-0.01em",fontWeight:"600"}],"code-sm":["0.6875rem",{lineHeight:"1rem",letterSpacing:"0em",fontWeight:"400"}],"code-lg":["0.875rem",{lineHeight:"1.375rem",letterSpacing:"-0.01em",fontWeight:"500"}],"body-lg":["1rem",{lineHeight:"1.5rem",letterSpacing:"-0.005em",fontWeight:"400"}],"display-lg":["2.25rem",{lineHeight:"2.75rem",letterSpacing:"-0.025em",fontWeight:"700"}],"headline-lg":["1.75rem",{lineHeight:"2.25rem",letterSpacing:"-0.02em",fontWeight:"600"}],"label-md":["0.8125rem",{lineHeight:"1.125rem",letterSpacing:"0.01em",fontWeight:"500"}],"headline-md":["1.375rem",{lineHeight:"1.75rem",letterSpacing:"-0.015em",fontWeight:"600"}]}}}}</script></head><body class="bg-surface font-body-md text-body-md text-on-surface antialiased"><header class="fixed top-0 left-0 right-0 z-50 bg-surface-container-lowest/95 backdrop-blur-md shadow-[0_1px_8px_rgba(0,0,0,0.04)]"><div class="w-full bg-primary-container text-on-primary px-gutter h-6 flex items-center justify-between font-code-sm text-code-sm uppercase tracking-wider"><div class="flex items-center gap-space-xs"><span class="material-symbols-outlined text-[14px] text-secondary-container">lock</span><span>AIRBUS INTERNAL - RESTRICTED // ITAR &amp; EAR CONTROLLED DATA ENCLAVE</span></div><div class="flex items-center gap-space-md"><span class="flex items-center gap-space-xs text-surface-container"><span class="w-1.5 h-1.5 rounded-full bg-secondary-container"></span>ZONE: EU-CENTRAL-AIRBUS-CORE</span><span class="text-primary-fixed">REF: AIR-SEC-2025-A350</span></div></div><div class="h-20 w-full px-gutter flex items-center justify-between gap-space-lg"><div class="flex items-center gap-space-lg"><div class="flex items-center gap-space-md"><img alt="Airbus Agent Studio Logo" class="h-8 w-auto object-contain" src="https://lh3.googleusercontent.com/aida/AEtjO1U42F9vAxNrnvNM_6vr5UaHonk2FTi22uynWRL4ewShj1csQFImlPzhe6ksFblYX69KFi92z6LH40jA5txodF6h-ZD_4odhb_1sz77m0me3hCIJ5n6KkTFlWbD2LxjZXxE42WbhF69is1HheETI70kEbcckzUKVKpqim4HWj8l9EERQe4uY-Ee3PIbGlJKvoEWOtO79dswi1fNqINhZh-tPOiTb7Uy-tFLrkWceBb_4MsYUb7GE-M0EQl0"/><div class="flex flex-col"><span class="font-headline-sm text-headline-sm text-primary tracking-tight font-bold leading-none">AGENT STUDIO</span><span class="font-label-sm text-label-sm text-on-surface-variant uppercase tracking-widest">Aerospace Systems &amp; Ops</span></div></div><div class="hidden xl:flex items-center gap-space-xs px-space-sm py-space-xs bg-surface-container-low rounded-lg"><span class="material-symbols-outlined text-[16px] text-secondary">cloud_done</span><span class="font-code-sm text-code-sm text-on-surface-variant font-medium">GCP europe-west3 (Frankfurt)</span></div></div><div class="flex-1 max-w-xl hidden md:block"><div class="relative flex items-center"><span class="material-symbols-outlined absolute left-space-md text-outline text-[18px]">search</span><input class="w-full pl-10 pr-space-md py-space-xs bg-surface-container-low text-on-surface font-body-sm text-body-sm placeholder:text-outline rounded-lg focus:outline-none focus:bg-surface-container-lowest" placeholder="Search certified agents, prompts, A350 telemetry &amp; flight specs (Ctrl + K)..." type="text"/><span class="absolute right-space-sm font-code-sm text-code-sm text-outline px-space-xs py-0.5 bg-surface-container-high rounded">/</span></div></div><div class="flex items-center gap-space-lg"><div class="hidden lg:flex items-center gap-space-md px-space-md py-space-xs bg-surface-container-low rounded-lg font-code-sm text-code-sm"><div class="flex items-center gap-1.5"><span class="w-2 h-2 rounded-full bg-secondary"></span><span class="text-on-surface-variant">Cloud Run</span></div><div class="flex items-center gap-1.5"><span class="w-2 h-2 rounded-full bg-secondary-container"></span><span class="text-on-surface-variant">Vertex AI</span></div><div class="flex items-center gap-1.5"><span class="w-2 h-2 rounded-full bg-secondary"></span><span class="text-on-surface-variant">Postgres IAM</span></div></div><div class="flex items-center gap-space-md pl-space-sm"><div class="hidden sm:flex flex-col text-right"><span class="font-label-md text-label-md text-primary font-semibold leading-tight">m.deshpande@airbus.com</span><span class="font-label-sm text-label-sm text-on-surface-variant">Engineering Lead • Workspace SSO</span></div><div class="w-8 h-8 rounded-full bg-primary flex items-center justify-center"><span class="material-symbols-outlined text-on-primary text-[18px]">person</span></div></div></div></div></header><aside class="fixed left-0 top-26 h-[calc(100vh-6.5rem)] w-64 bg-surface-container-lowest shadow-[0_1px_8px_rgba(0,0,0,0.04)] z-40 flex flex-col justify-between py-space-md"><div class="flex flex-col gap-space-xs px-space-sm"><div class="px-space-md py-space-xs font-label-sm text-label-sm text-outline uppercase tracking-wider">Enterprise Console</div><nav class="flex flex-col gap-1" data-active-classes="bg-primary-container text-on-primary font-semibold shadow-sm"><a aria-current="page" class="flex items-center gap-space-md px-space-md py-space-sm rounded-lg transition-colors bg-primary-container text-on-primary font-semibold shadow-sm" data-path="agent-catalog" href="#"><span class="material-symbols-outlined text-[20px]">hub</span><span class="font-body-md text-body-md">Agent Catalog</span></a><a class="flex items-center gap-space-md px-space-md py-space-sm rounded-lg text-on-surface-variant hover:bg-surface-container-high hover:text-on-surface transition-colors" data-path="agent-builder" href="#"><span class="material-symbols-outlined text-[20px]">account_tree</span><span class="font-body-md text-body-md">Agent Builder</span></a><a class="flex items-center gap-space-md px-space-md py-space-sm rounded-lg text-on-surface-variant hover:bg-surface-container-high hover:text-on-surface transition-colors" data-path="chat-reasoning" href="#"><span class="material-symbols-outlined text-[20px]">psychology</span><span class="font-body-md text-body-md">Chat &amp; Reasoning</span></a><a class="flex items-center gap-space-md px-space-md py-space-sm rounded-lg text-on-surface-variant hover:bg-surface-container-high hover:text-on-surface transition-colors" data-path="interactive-dashboards" href="#"><span class="material-symbols-outlined text-[20px]">monitoring</span><span class="font-body-md text-body-md">Interactive Dashboards</span></a><a class="flex items-center gap-space-md px-space-md py-space-sm rounded-lg text-on-surface-variant hover:bg-surface-container-high hover:text-on-surface transition-colors" data-path="audit-telemetry" href="#"><span class="material-symbols-outlined text-[20px]">verified_user</span><span class="font-body-md text-body-md">Audit &amp; Telemetry</span></a></nav><div class="mt-space-md px-space-md py-space-xs font-label-sm text-label-sm text-outline uppercase tracking-wider">Certification Enclaves</div><div class="flex flex-col gap-1"><a class="flex items-center gap-space-md px-space-md py-space-sm rounded-lg text-on-surface-variant hover:bg-surface-container-high hover:text-on-surface transition-colors" data-path="compliance-records" href="#"><span class="material-symbols-outlined text-[20px]">fact_check</span><span class="font-body-md text-body-md">DO-178C Verification</span></a><a class="flex items-center gap-space-md px-space-md py-space-sm rounded-lg text-on-surface-variant hover:bg-surface-container-high hover:text-on-surface transition-colors" data-path="flight-test-telemetry" href="#"><span class="material-symbols-outlined text-[20px]">flight</span><span class="font-body-md text-body-md">Flight Test Telemetry</span></a></div></div><div class="px-space-md py-space-sm mx-space-sm bg-surface-container-low rounded-lg"><div class="flex items-center justify-between mb-1"><span class="font-label-sm text-label-sm text-outline uppercase">Cluster Quota</span><span class="font-code-sm text-code-sm text-secondary font-medium">82.4%</span></div><div class="w-full bg-surface-container-high h-1.5 rounded-full overflow-hidden"><div class="bg-primary-container h-full w-[82.4%]"></div></div><div class="mt-space-xs flex justify-between font-code-sm text-code-sm text-on-surface-variant"><span>A100-80GB: 16/20</span><span>Node OK</span></div></div></aside><div class="pl-64"><main class="w-full pt-26 bg-surface px-gutter"><div class="flex flex-col w-full">
+<!-- TOP CONTEXT TICKER / SECURITY BAR -->
+<div class="w-full bg-surface-container-low px-space-lg py-space-xs flex flex-wrap items-center justify-between gap-space-md shadow-sm">
+<div class="flex items-center gap-space-sm">
+<span class="inline-flex items-center gap-1.5 px-space-xs py-0.5 rounded-DEFAULT bg-primary-container text-on-primary font-code-sm text-code-sm">
+<span class="w-1.5 h-1.5 rounded-full bg-secondary-container"></span>
+        IAP AUTH ACTIVE
+      </span>
+<span class="font-code-sm text-code-sm text-on-surface-variant">Cloud Run: <span class="font-semibold text-primary">platform-api-00084-lon</span> (Node 22 / pi-harness)</span>
+<span class="text-outline-variant">•</span>
+<span class="font-code-sm text-code-sm text-on-surface-variant">Model Armor: <span class="text-secondary font-medium">L4 Filter Policy ON</span></span>
+</div>
+<div class="flex items-center gap-space-lg font-code-sm text-code-sm text-on-surface-variant">
+<span>GCS Workspace Prefix: <code class="text-primary font-medium">gs://airbus-prod-agents/versions/</code></span>
+<span class="inline-flex items-center gap-1 text-on-secondary-container">
+<span class="material-symbols-outlined text-[14px]">history</span>
+        Postgres PITR: Synchronized
+      </span>
+</div>
+</div>
+<!-- MAIN CATALOG HEADER -->
+<header class="w-full bg-surface-container-lowest px-gutter py-space-xl shadow-sm mt-space-md">
+<div class="flex flex-col lg:flex-row lg:items-start lg:justify-between gap-space-xl">
+<div class="max-w-3xl">
+<div class="flex items-center gap-space-sm mb-space-xs">
+<span class="font-code-sm text-code-sm uppercase tracking-wider text-secondary font-bold">AIRBUS AUTONOMOUS WORKFORCE // ORCHESTRATION LAYER</span>
+<span class="px-2 py-0.5 rounded-DEFAULT bg-surface-container-high font-code-sm text-code-sm text-on-surface-variant">pi-sdk 0.85.1 (ADC)</span>
+</div>
+<h1 class="font-display-lg text-display-lg text-primary tracking-tight font-bold">Enterprise Autonomous Agents</h1>
+<p class="mt-space-xs font-body-lg text-body-lg text-on-surface-variant max-w-2xl leading-relaxed">
+          Discover, run, and govern self-service AI agents grounded on Airbus engineering databases, technical manuals, and operational Parquet tables.
+        </p>
+</div>
+<!-- PRIMARY ACTION -->
+<div class="flex flex-col sm:flex-row items-stretch sm:items-center gap-space-md self-start">
+<button class="px-space-md py-space-sm rounded-DEFAULT bg-surface-container-high hover:bg-surface-container text-on-surface font-label-md text-label-md flex items-center justify-center gap-space-xs transition-colors shadow-sm" id="refreshCatalogBtn">
+<span class="material-symbols-outlined text-[18px]">sync</span>
+<span>Sync Manifests</span>
+</button>
+<button class="px-space-lg py-space-sm rounded-DEFAULT bg-primary-container hover:bg-primary text-on-primary font-label-md text-label-md flex items-center justify-center gap-space-xs transition-colors shadow-md">
+<span class="material-symbols-outlined text-[20px]">flight</span>
+<span>+ Create New Agent</span>
+</button>
+</div>
+</div>
+<!-- METRIC METERS -->
+<div class="grid grid-cols-2 lg:grid-cols-4 gap-space-md mt-space-xl">
+<div class="p-space-md bg-surface-container-low rounded-DEFAULT flex flex-col justify-between">
+<div class="flex items-center justify-between text-on-surface-variant">
+<span class="font-label-sm text-label-sm uppercase tracking-wider font-semibold">Published Agents</span>
+<span class="material-symbols-outlined text-[18px] text-secondary">smart_toy</span>
+</div>
+<div class="mt-space-sm flex items-baseline gap-space-sm">
+<span class="font-headline-lg text-headline-lg font-bold text-primary">24</span>
+<span class="font-code-sm text-code-sm text-secondary font-medium">100% GCS Synced</span>
+</div>
+<div class="w-full bg-surface-container-high h-1 mt-space-sm rounded-full overflow-hidden">
+<div class="bg-primary-container h-full w-full"></div>
+</div>
+</div>
+<div class="p-space-md bg-surface-container-low rounded-DEFAULT flex flex-col justify-between">
+<div class="flex items-center justify-between text-on-surface-variant">
+<span class="font-label-sm text-label-sm uppercase tracking-wider font-semibold">Indexed Docs &amp; Specs</span>
+<span class="material-symbols-outlined text-[18px] text-secondary">menu_book</span>
+</div>
+<div class="mt-space-sm flex items-baseline gap-space-sm">
+<span class="font-headline-lg text-headline-lg font-bold text-primary">1,420</span>
+<span class="font-code-sm text-code-sm text-on-surface-variant">RAG + DocAI</span>
+</div>
+<div class="w-full bg-surface-container-high h-1 mt-space-sm rounded-full overflow-hidden">
+<div class="bg-secondary h-full w-4/5"></div>
+</div>
+</div>
+<div class="p-space-md bg-surface-container-low rounded-DEFAULT flex flex-col justify-between">
+<div class="flex items-center justify-between text-on-surface-variant">
+<span class="font-label-sm text-label-sm uppercase tracking-wider font-semibold">DuckDB Parquet Rows</span>
+<span class="material-symbols-outlined text-[18px] text-secondary">database</span>
+</div>
+<div class="mt-space-sm flex items-baseline gap-space-sm">
+<span class="font-headline-lg text-headline-lg font-bold text-primary">8.4M</span>
+<span class="font-code-sm text-code-sm text-on-surface-variant">In-process SQL</span>
+</div>
+<div class="w-full bg-surface-container-high h-1 mt-space-sm rounded-full overflow-hidden">
+<div class="bg-secondary-container h-full w-[92%]"></div>
+</div>
+</div>
+<div class="p-space-md bg-surface-container-low rounded-DEFAULT flex flex-col justify-between">
+<div class="flex items-center justify-between text-on-surface-variant">
+<span class="font-label-sm text-label-sm uppercase tracking-wider font-semibold">Grounded Citation Rate</span>
+<span class="material-symbols-outlined text-[18px] text-secondary">verified</span>
+</div>
+<div class="mt-space-sm flex items-baseline gap-space-sm">
+<span class="font-headline-lg text-headline-lg font-bold text-secondary">99.8%</span>
+<span class="font-code-sm text-code-sm text-on-surface-variant">Strict [doc:p]</span>
+</div>
+<div class="w-full bg-surface-container-high h-1 mt-space-sm rounded-full overflow-hidden">
+<div class="bg-secondary h-full w-[99.8%]"></div>
+</div>
+</div>
+</div>
+</header>
+<!-- SEARCH, FILTER MATRIX & ENCLAVE CLASSIFICATION -->
+<section class="w-full bg-surface-container-lowest px-gutter py-space-md mt-space-sm shadow-sm flex flex-col gap-space-md">
+<!-- Top Filter Row: Search & Status Toggles -->
+<div class="flex flex-col md:flex-row items-stretch md:items-center justify-between gap-space-md">
+<div class="flex-1 relative">
+<span class="material-symbols-outlined absolute left-space-md top-1/2 -translate-y-1/2 text-outline text-[20px]">manage_search</span>
+<input class="w-full pl-11 pr-space-md py-space-sm bg-surface-container-low text-on-surface font-body-sm text-body-sm rounded-DEFAULT focus:outline-none focus:bg-surface-container-highest transition-colors" id="agentSearch" placeholder="Filter by agent name, aircraft program, doc tag, tool signature (e.g. A350, METAR, query_table)..." type="text"/>
+</div>
+<!-- Status Toggles -->
+<div class="flex items-center gap-1 bg-surface-container-low p-1 rounded-DEFAULT self-start md:self-auto font-label-sm text-label-sm">
+<button class="status-toggle-btn px-space-md py-1 rounded-DEFAULT bg-primary-container text-on-primary font-semibold shadow-sm" data-status="all">All Lifecycles</button>
+<button class="status-toggle-btn px-space-md py-1 rounded-DEFAULT text-on-surface-variant hover:text-on-surface transition-colors" data-status="production">Production v1.x+</button>
+<button class="status-toggle-btn px-space-md py-1 rounded-DEFAULT text-on-surface-variant hover:text-on-surface transition-colors" data-status="staging">Staging / Drafts</button>
+</div>
+</div>
+<!-- Badges Row: Classification and Divisions -->
+<div class="flex flex-wrap items-center justify-between gap-space-md pt-space-xs">
+<div class="flex flex-wrap items-center gap-space-xs">
+<span class="font-code-sm text-code-sm text-outline mr-space-xs uppercase tracking-wider">Security Enclave:</span>
+<button class="filter-badge px-space-sm py-1 rounded-DEFAULT bg-primary-container text-on-primary font-code-sm text-code-sm" data-filter="all">ALL (24)</button>
+<button class="filter-badge px-space-sm py-1 rounded-DEFAULT bg-surface-container-low hover:bg-surface-container-high text-on-surface-variant font-code-sm text-code-sm" data-filter="public">PUBLIC (2)</button>
+<button class="filter-badge px-space-sm py-1 rounded-DEFAULT bg-surface-container-low hover:bg-surface-container-high text-on-surface-variant font-code-sm text-code-sm" data-filter="internal">INTERNAL (11)</button>
+<button class="filter-badge px-space-sm py-1 rounded-DEFAULT bg-surface-container-low hover:bg-surface-container-high text-on-surface-variant font-code-sm text-code-sm" data-filter="restricted">RESTRICTED // ITAR (8)</button>
+<button class="filter-badge px-space-sm py-1 rounded-DEFAULT bg-surface-container-low hover:bg-surface-container-high text-on-surface-variant font-code-sm text-code-sm" data-filter="confidential">SECRET DEFENSE (3)</button>
+</div>
+<div class="flex flex-wrap items-center gap-space-xs">
+<span class="font-code-sm text-code-sm text-outline mr-space-xs uppercase tracking-wider">Airbus Division:</span>
+<span class="division-tag cursor-pointer px-space-xs py-0.5 rounded-DEFAULT bg-surface-container-high text-on-surface-variant hover:text-primary font-label-sm text-label-sm">Commercial Aircraft</span>
+<span class="division-tag cursor-pointer px-space-xs py-0.5 rounded-DEFAULT bg-surface-container-high text-on-surface-variant hover:text-primary font-label-sm text-label-sm">Helicopters</span>
+<span class="division-tag cursor-pointer px-space-xs py-0.5 rounded-DEFAULT bg-surface-container-high text-on-surface-variant hover:text-primary font-label-sm text-label-sm">Defence &amp; Space</span>
+<span class="division-tag cursor-pointer px-space-xs py-0.5 rounded-DEFAULT bg-surface-container-high text-on-surface-variant hover:text-primary font-label-sm text-label-sm">Flight Operations</span>
+<span class="division-tag cursor-pointer px-space-xs py-0.5 rounded-DEFAULT bg-surface-container-high text-on-surface-variant hover:text-primary font-label-sm text-label-sm">Quality &amp; Safety</span>
+</div>
+</div>
+</section>
+<!-- MAIN 2-COLUMN LAYOUT: AGENT CARDS GRID + TELEMETRY / RUNTIME DRAWER -->
+<div class="w-full grid grid-cols-1 xl:grid-cols-12 gap-space-lg my-space-lg items-start">
+<!-- LEFT: AGENT CARDS GRID (9 COLUMNS) -->
+<main class="xl:col-span-9 flex flex-col gap-space-md">
+<!-- CARD 1: A350 Maintenance Dispatch Agent -->
+<article class="agent-card bg-surface-container-lowest p-space-lg rounded-DEFAULT shadow-sm flex flex-col gap-space-md hover:shadow-md transition-shadow" data-classification="restricted" data-program="a350 commercial maintenance">
+<div class="flex flex-wrap items-start justify-between gap-space-md">
+<div class="flex items-start gap-space-md">
+<div class="w-12 h-12 rounded-DEFAULT bg-primary-container text-on-primary flex items-center justify-center flex-shrink-0">
+<span class="material-symbols-outlined text-[26px]">precision_manufacturing</span>
+</div>
+<div>
+<div class="flex flex-wrap items-center gap-space-xs">
+<h2 class="font-headline-sm text-headline-sm font-bold text-primary">A350 Maintenance Dispatch Agent</h2>
+<span class="font-code-sm text-code-sm px-2 py-0.5 rounded-DEFAULT bg-surface-container text-primary font-semibold">v2.4</span>
+<span class="inline-flex items-center gap-1 px-2 py-0.5 rounded-DEFAULT bg-surface-container-highest text-primary font-code-sm text-code-sm">
+<span class="w-1.5 h-1.5 rounded-full bg-secondary"></span> Ready / Certified
+                </span>
+</div>
+<p class="font-code-sm text-code-sm text-on-surface-variant mt-1">
+                Published by <span class="text-primary font-medium">j.dupont@airbus.com</span> • 2h ago • ACL: 42 certified Tech-Ops engineers
+              </p>
+</div>
+</div>
+<div class="flex items-center gap-space-xs">
+<span class="px-space-sm py-1 rounded-DEFAULT bg-primary-container text-on-primary font-code-sm text-code-sm font-semibold tracking-wider">
+              RESTRICTED // AIRBUS TECH-OPS
+            </span>
+</div>
+</div>
+<p class="font-body-md text-body-md text-on-surface leading-relaxed">
+          Automated line-maintenance root-cause resolution, minimum equipment list (MEL) cross-referencing, and real-time dispatch deferral calculation for long-range A350-900 / A350-1000 fleets.
+        </p>
+<!-- Technical Metadata Bento -->
+<div class="grid grid-cols-1 md:grid-cols-3 gap-space-sm p-space-sm bg-surface-container-low rounded-DEFAULT font-code-sm text-code-sm">
+<div>
+<span class="text-outline block uppercase text-[10px] tracking-wider">Model Runtime:</span>
+<div class="text-primary font-semibold flex items-center gap-1 mt-0.5">
+<span class="material-symbols-outlined text-[16px] text-secondary">memory</span>
+              Gemini 1.5 Pro • Hybrid RAG + DuckDB
+            </div>
+</div>
+<div class="md:col-span-2">
+<span class="text-outline block uppercase text-[10px] tracking-wider">Connected Knowledge Corpus:</span>
+<div class="text-on-surface-variant flex items-center gap-1.5 mt-0.5 truncate">
+<span class="material-symbols-outlined text-[16px] text-primary">folder_open</span>
+<span class="truncate">38 AMM Manuals, 12 Service Bulletins, Fleet Reliability Parquet table (<strong class="text-primary">2.4M rows</strong>)</span>
+</div>
+</div>
+</div>
+<!-- Skills & Tools Tag Cluster -->
+<div class="flex flex-wrap items-center justify-between gap-space-sm pt-space-xs">
+<div class="flex flex-wrap items-center gap-space-xs">
+<span class="font-code-sm text-code-sm text-outline uppercase tracking-wider mr-1">Bound Skills:</span>
+<span class="px-2 py-0.5 rounded-DEFAULT bg-surface-container font-code-sm text-code-sm text-primary">search_documents</span>
+<span class="px-2 py-0.5 rounded-DEFAULT bg-surface-container font-code-sm text-code-sm text-primary">query_table (DuckDB)</span>
+<span class="px-2 py-0.5 rounded-DEFAULT bg-surface-container font-code-sm text-code-sm text-primary">read_document</span>
+<span class="px-2 py-0.5 rounded-DEFAULT bg-surface-container-high font-code-sm text-code-sm text-secondary font-semibold">fault_code_lookup</span>
+</div>
+<!-- Actions -->
+<div class="flex items-center gap-space-sm">
+<button class="px-space-md py-space-xs rounded-DEFAULT bg-surface-container-high hover:bg-surface-container text-primary font-label-md text-label-md flex items-center gap-1 transition-colors">
+<span class="material-symbols-outlined text-[16px]">tune</span>
+              Inspect Config
+            </button>
+<button class="px-space-md py-space-xs rounded-DEFAULT bg-primary-container hover:bg-primary text-on-primary font-label-md text-label-md flex items-center gap-1 transition-colors shadow-sm">
+<span class="material-symbols-outlined text-[16px]">chat</span>
+              Open Chat
+            </button>
+</div>
+</div>
+</article>
+<!-- CARD 2: Flight Operations Fuel Optimizer -->
+<article class="agent-card bg-surface-container-lowest p-space-lg rounded-DEFAULT shadow-sm flex flex-col gap-space-md hover:shadow-md transition-shadow" data-classification="confidential" data-program="commercial flight-ops fuel eurocontrol">
+<div class="flex flex-wrap items-start justify-between gap-space-md">
+<div class="flex items-start gap-space-md">
+<div class="w-12 h-12 rounded-DEFAULT bg-secondary-container text-on-secondary-container flex items-center justify-center flex-shrink-0">
+<span class="material-symbols-outlined text-[26px]">local_gas_station</span>
+</div>
+<div>
+<div class="flex flex-wrap items-center gap-space-xs">
+<h2 class="font-headline-sm text-headline-sm font-bold text-primary">Flight Operations Fuel Optimizer</h2>
+<span class="font-code-sm text-code-sm px-2 py-0.5 rounded-DEFAULT bg-surface-container text-primary font-semibold">v1.8</span>
+<span class="inline-flex items-center gap-1 px-2 py-0.5 rounded-DEFAULT bg-surface-container-highest text-primary font-code-sm text-code-sm">
+<span class="w-1.5 h-1.5 rounded-full bg-secondary"></span> Certified
+                </span>
+</div>
+<p class="font-code-sm text-code-sm text-on-surface-variant mt-1">
+                Published by <span class="text-primary font-medium">f.mueller@airbus.com</span> • 1d ago • ACL: Fuel Conservation Taskforce
+              </p>
+</div>
+</div>
+<div class="flex items-center gap-space-xs">
+<span class="px-space-sm py-1 rounded-DEFAULT bg-tertiary-container text-on-tertiary-container font-code-sm text-code-sm font-semibold tracking-wider">
+              CONFIDENTIAL // SECRET DEFENSE
+            </span>
+</div>
+</div>
+<p class="font-body-md text-body-md text-on-surface leading-relaxed">
+          Real-time cruise altitude, cost index, and step-climb fuel recalculation using Eurocontrol live airway congestion logs and live engine exhaust gas temperature (EGT) telemetry.
+        </p>
+<!-- Technical Metadata Bento -->
+<div class="grid grid-cols-1 md:grid-cols-3 gap-space-sm p-space-sm bg-surface-container-low rounded-DEFAULT font-code-sm text-code-sm">
+<div>
+<span class="text-outline block uppercase text-[10px] tracking-wider">Model Runtime:</span>
+<div class="text-primary font-semibold flex items-center gap-1 mt-0.5">
+<span class="material-symbols-outlined text-[16px] text-secondary">bolt</span>
+              Gemini 1.5 Flash • Thinking Budget: High
+            </div>
+</div>
+<div class="md:col-span-2">
+<span class="text-outline block uppercase text-[10px] tracking-wider">Connected Knowledge Corpus:</span>
+<div class="text-on-surface-variant flex items-center gap-1.5 mt-0.5 truncate">
+<span class="material-symbols-outlined text-[16px] text-primary">folder_open</span>
+<span class="truncate">Eurocontrol Route Waypoints, Engine EGT logs, Live METAR / TAF weather feeds</span>
+</div>
+</div>
+</div>
+<!-- Skills & Tools Tag Cluster -->
+<div class="flex flex-wrap items-center justify-between gap-space-sm pt-space-xs">
+<div class="flex flex-wrap items-center gap-space-xs">
+<span class="font-code-sm text-code-sm text-outline uppercase tracking-wider mr-1">Bound Skills:</span>
+<span class="px-2 py-0.5 rounded-DEFAULT bg-surface-container font-code-sm text-code-sm text-primary">query_table</span>
+<span class="px-2 py-0.5 rounded-DEFAULT bg-surface-container font-code-sm text-code-sm text-primary">ask_agent (Weather-Advisor)</span>
+<span class="px-2 py-0.5 rounded-DEFAULT bg-surface-container-high font-code-sm text-code-sm text-secondary font-semibold">egt_anomaly_scan</span>
+</div>
+<!-- Actions -->
+<div class="flex items-center gap-space-sm">
+<button class="px-space-md py-space-xs rounded-DEFAULT bg-surface-container-high hover:bg-surface-container text-primary font-label-md text-label-md flex items-center gap-1 transition-colors">
+<span class="material-symbols-outlined text-[16px]">tune</span>
+              Inspect Config
+            </button>
+<button class="px-space-md py-space-xs rounded-DEFAULT bg-primary-container hover:bg-primary text-on-primary font-label-md text-label-md flex items-center gap-1 transition-colors shadow-sm">
+<span class="material-symbols-outlined text-[16px]">chat</span>
+              Open Chat
+            </button>
+</div>
+</div>
+</article>
+<!-- CARD 3: Structural Fatigue & NDT Analyst -->
+<article class="agent-card bg-surface-container-lowest p-space-lg rounded-DEFAULT shadow-sm flex flex-col gap-space-md hover:shadow-md transition-shadow" data-classification="restricted" data-program="aerostructures ndt stress fatigue commercial">
+<div class="flex flex-wrap items-start justify-between gap-space-md">
+<div class="flex items-start gap-space-md">
+<div class="w-12 h-12 rounded-DEFAULT bg-primary text-on-primary flex items-center justify-center flex-shrink-0">
+<span class="material-symbols-outlined text-[26px]">broken_image</span>
+</div>
+<div>
+<div class="flex flex-wrap items-center gap-space-xs">
+<h2 class="font-headline-sm text-headline-sm font-bold text-primary">Structural Fatigue &amp; NDT Analyst</h2>
+<span class="font-code-sm text-code-sm px-2 py-0.5 rounded-DEFAULT bg-surface-container text-primary font-semibold">v3.1</span>
+<span class="inline-flex items-center gap-1 px-2 py-0.5 rounded-DEFAULT bg-surface-container-highest text-primary font-code-sm text-code-sm">
+<span class="w-1.5 h-1.5 rounded-full bg-secondary"></span> Production
+                </span>
+</div>
+<p class="font-code-sm text-code-sm text-on-surface-variant mt-1">
+                Published by <span class="text-primary font-medium">m.deshpande@airbus.com</span> • 3d ago • ACL: Aerostructures Engineering Core
+              </p>
+</div>
+</div>
+<div class="flex items-center gap-space-xs">
+<span class="px-space-sm py-1 rounded-DEFAULT bg-primary-container text-on-primary font-code-sm text-code-sm font-semibold tracking-wider">
+              RESTRICTED // ITAR CONTROLLED
+            </span>
+</div>
+</div>
+<p class="font-body-md text-body-md text-on-surface leading-relaxed">
+          Parses non-destructive testing ultrasonic scans, crack growth finite-element tables, and titanium wing-spar fatigue tests with DO-178C verified traceability anchors.
+        </p>
+<!-- Technical Metadata Bento -->
+<div class="grid grid-cols-1 md:grid-cols-3 gap-space-sm p-space-sm bg-surface-container-low rounded-DEFAULT font-code-sm text-code-sm">
+<div>
+<span class="text-outline block uppercase text-[10px] tracking-wider">Model Runtime:</span>
+<div class="text-primary font-semibold flex items-center gap-1 mt-0.5">
+<span class="material-symbols-outlined text-[16px] text-secondary">document_scanner</span>
+              Gemini 1.5 Pro • Document AI Layout Parser
+            </div>
+</div>
+<div class="md:col-span-2">
+<span class="text-outline block uppercase text-[10px] tracking-wider">Connected Knowledge Corpus:</span>
+<div class="text-on-surface-variant flex items-center gap-1.5 mt-0.5 truncate">
+<span class="material-symbols-outlined text-[16px] text-primary">folder_open</span>
+<span class="truncate">142 Stress Test Reports, Ultrasonic scan logs, Metallurgy spec sheets</span>
+</div>
+</div>
+</div>
+<!-- Skills & Tools Tag Cluster -->
+<div class="flex flex-wrap items-center justify-between gap-space-sm pt-space-xs">
+<div class="flex flex-wrap items-center gap-space-xs">
+<span class="font-code-sm text-code-sm text-outline uppercase tracking-wider mr-1">Bound Skills:</span>
+<span class="px-2 py-0.5 rounded-DEFAULT bg-surface-container font-code-sm text-code-sm text-primary">read_document (page anchors)</span>
+<span class="px-2 py-0.5 rounded-DEFAULT bg-surface-container font-code-sm text-code-sm text-primary">list_documents</span>
+<span class="px-2 py-0.5 rounded-DEFAULT bg-surface-container-high font-code-sm text-code-sm text-secondary font-semibold">structural_eval</span>
+</div>
+<!-- Actions -->
+<div class="flex items-center gap-space-sm">
+<button class="px-space-md py-space-xs rounded-DEFAULT bg-surface-container-high hover:bg-surface-container text-primary font-label-md text-label-md flex items-center gap-1 transition-colors">
+<span class="material-symbols-outlined text-[16px]">tune</span>
+              Inspect Config
+            </button>
+<button class="px-space-md py-space-xs rounded-DEFAULT bg-primary-container hover:bg-primary text-on-primary font-label-md text-label-md flex items-center gap-1 transition-colors shadow-sm">
+<span class="material-symbols-outlined text-[16px]">chat</span>
+              Open Chat
+            </button>
+</div>
+</div>
+</article>
+<!-- CARD 4: Supply Chain & AS6500 Compliance Copilot -->
+<article class="agent-card bg-surface-container-lowest p-space-lg rounded-DEFAULT shadow-sm flex flex-col gap-space-md hover:shadow-md transition-shadow" data-classification="internal" data-program="supply quality as6500 procurement">
+<div class="flex flex-wrap items-start justify-between gap-space-md">
+<div class="flex items-start gap-space-md">
+<div class="w-12 h-12 rounded-DEFAULT bg-surface-container-high text-primary flex items-center justify-center flex-shrink-0">
+<span class="material-symbols-outlined text-[26px]">fact_check</span>
+</div>
+<div>
+<div class="flex flex-wrap items-center gap-space-xs">
+<h2 class="font-headline-sm text-headline-sm font-bold text-primary">Supply Chain &amp; AS6500 Compliance Copilot</h2>
+<span class="font-code-sm text-code-sm px-2 py-0.5 rounded-DEFAULT bg-surface-container text-primary font-semibold">v1.2</span>
+<span class="inline-flex items-center gap-1 px-2 py-0.5 rounded-DEFAULT bg-surface-container-highest text-primary font-code-sm text-code-sm">
+<span class="w-1.5 h-1.5 rounded-full bg-secondary"></span> Verified
+                </span>
+</div>
+<p class="font-code-sm text-code-sm text-on-surface-variant mt-1">
+                Published by <span class="text-primary font-medium">s.chen@airbus.com</span> • 4d ago • ACL: Global Procurement &amp; QA
+              </p>
+</div>
+</div>
+<div class="flex items-center gap-space-xs">
+<span class="px-space-sm py-1 rounded-DEFAULT bg-surface-container-highest text-primary font-code-sm text-code-sm font-semibold tracking-wider">
+              INTERNAL USE ONLY
+            </span>
+</div>
+</div>
+<p class="font-body-md text-body-md text-on-surface leading-relaxed">
+          Verifies tier-1 aerospace component suppliers against SAE AS6500 manufacturing process standards, flagging delivery schedule bottlenecks from global inventory Parquet streams.
+        </p>
+<!-- Technical Metadata Bento -->
+<div class="grid grid-cols-1 md:grid-cols-3 gap-space-sm p-space-sm bg-surface-container-low rounded-DEFAULT font-code-sm text-code-sm">
+<div>
+<span class="text-outline block uppercase text-[10px] tracking-wider">Model Runtime:</span>
+<div class="text-primary font-semibold flex items-center gap-1 mt-0.5">
+<span class="material-symbols-outlined text-[16px] text-secondary">shield</span>
+              Gemini 1.5 Flash • Model Armor Guardrails Active
+            </div>
+</div>
+<div class="md:col-span-2">
+<span class="text-outline block uppercase text-[10px] tracking-wider">Connected Knowledge Corpus:</span>
+<div class="text-on-surface-variant flex items-center gap-1.5 mt-0.5 truncate">
+<span class="material-symbols-outlined text-[16px] text-primary">folder_open</span>
+<span class="truncate">520 Supplier Quality Audits, Delivery schedules Parquet table</span>
+</div>
+</div>
+</div>
+<!-- Skills & Tools Tag Cluster -->
+<div class="flex flex-wrap items-center justify-between gap-space-sm pt-space-xs">
+<div class="flex flex-wrap items-center gap-space-xs">
+<span class="font-code-sm text-code-sm text-outline uppercase tracking-wider mr-1">Bound Skills:</span>
+<span class="px-2 py-0.5 rounded-DEFAULT bg-surface-container font-code-sm text-code-sm text-primary">search_documents</span>
+<span class="px-2 py-0.5 rounded-DEFAULT bg-surface-container font-code-sm text-code-sm text-primary">query_table</span>
+<span class="px-2 py-0.5 rounded-DEFAULT bg-surface-container-high font-code-sm text-code-sm text-secondary font-semibold">citation_enforcer</span>
+</div>
+<!-- Actions -->
+<div class="flex items-center gap-space-sm">
+<button class="px-space-md py-space-xs rounded-DEFAULT bg-surface-container-high hover:bg-surface-container text-primary font-label-md text-label-md flex items-center gap-1 transition-colors">
+<span class="material-symbols-outlined text-[16px]">tune</span>
+              Inspect Config
+            </button>
+<button class="px-space-md py-space-xs rounded-DEFAULT bg-primary-container hover:bg-primary text-on-primary font-label-md text-label-md flex items-center gap-1 transition-colors shadow-sm">
+<span class="material-symbols-outlined text-[16px]">chat</span>
+              Open Chat
+            </button>
+</div>
+</div>
+</article>
+</main>
+<!-- RIGHT: RUNTIME TELEMETRY & CLOUD GOVERNANCE SIDEBAR (3 COLUMNS) -->
+<aside class="xl:col-span-3 flex flex-col gap-space-md">
+<!-- Panel 1: Platform Health & Quotas -->
+<div class="bg-surface-container-lowest p-space-md rounded-DEFAULT shadow-sm flex flex-col gap-space-md">
+<div class="flex items-center justify-between pb-space-xs border-b border-surface-container">
+<span class="font-headline-sm text-headline-sm text-primary font-bold">Platform Status</span>
+<span class="px-2 py-0.5 rounded-DEFAULT bg-surface-container text-primary font-code-sm text-code-sm">LIVE</span>
+</div>
+<!-- Metric 1: Vertex AI Quota -->
+<div class="flex flex-col gap-1">
+<div class="flex justify-between font-label-sm text-label-sm">
+<span class="text-on-surface-variant">Vertex AI Gemini 1.5 Pro</span>
+<span class="font-code-sm text-code-sm font-semibold text-primary">4,120 / 10,000 RPM</span>
+</div>
+<div class="w-full bg-surface-container-high h-2 rounded-full overflow-hidden">
+<div class="bg-primary-container h-full w-[41.2%]"></div>
+</div>
+<span class="font-code-sm text-code-sm text-outline">europe-west3 region • ADC Enabled</span>
+</div>
+<!-- Metric 2: Cloud SQL Pool -->
+<div class="flex flex-col gap-1 pt-space-xs">
+<div class="flex justify-between font-label-sm text-label-sm">
+<span class="text-on-surface-variant">Cloud SQL Connection Pool</span>
+<span class="font-code-sm text-code-sm font-semibold text-secondary">38 / 100 Conn</span>
+</div>
+<div class="w-full bg-surface-container-high h-2 rounded-full overflow-hidden">
+<div class="bg-secondary h-full w-[38%]"></div>
+</div>
+<div class="flex items-center gap-1 font-code-sm text-code-sm text-on-surface-variant">
+<span class="material-symbols-outlined text-[14px] text-secondary">key</span>
+<span>IAM DB Auth: ACTIVE (Postgres 16)</span>
+</div>
+</div>
+<!-- Metric 3: GCS Workspace Cache -->
+<div class="flex flex-col gap-1 pt-space-xs">
+<div class="flex justify-between font-label-sm text-label-sm">
+<span class="text-on-surface-variant">GCS Workspace Cache Hit</span>
+<span class="font-code-sm text-code-sm font-semibold text-primary">94.2%</span>
+</div>
+<div class="w-full bg-surface-container-high h-2 rounded-full overflow-hidden">
+<div class="bg-primary-container h-full w-[94.2%]"></div>
+</div>
+<span class="font-code-sm text-code-sm text-outline">LRU Cache /tmp/ws/ (1.8GB / 2GB limit)</span>
+</div>
+</div>
+<!-- Panel 2: Live Ingest Worker Activity -->
+<div class="bg-surface-container-lowest p-space-md rounded-DEFAULT shadow-sm flex flex-col gap-space-sm">
+<div class="flex items-center justify-between pb-space-xs border-b border-surface-container">
+<span class="font-headline-sm text-headline-sm text-primary font-bold">Ingest Queue</span>
+<span class="flex items-center gap-1 font-code-sm text-code-sm text-secondary">
+<span class="w-2 h-2 rounded-full bg-secondary-container animate-pulse"></span>
+            Worker Idle
+          </span>
+</div>
+<p class="font-body-sm text-body-sm text-on-surface-variant">
+          Eventarc GCS Finalize triggers convert PDFs to anchored Markdown and Excel/CSV to Parquet tables automatically.
+        </p>
+<div class="flex flex-col gap-2 pt-1 font-code-sm text-code-sm">
+<div class="p-2 bg-surface-container-low rounded-DEFAULT flex items-center justify-between">
+<div class="flex items-center gap-1.5 truncate">
+<span class="material-symbols-outlined text-[16px] text-secondary">task_alt</span>
+<span class="truncate">A350_AMM_CH52.pdf</span>
+</div>
+<span class="text-outline">100% (Ready)</span>
+</div>
+<div class="p-2 bg-surface-container-low rounded-DEFAULT flex items-center justify-between">
+<div class="flex items-center gap-1.5 truncate">
+<span class="material-symbols-outlined text-[16px] text-secondary">task_alt</span>
+<span class="truncate">EGT_Flight_Logs_Q1.parquet</span>
+</div>
+<span class="text-outline">2.4M rows</span>
+</div>
+</div>
+</div>
+<!-- Panel 3: Architecture & Security Reference -->
+<div class="bg-primary-container text-on-primary p-space-md rounded-DEFAULT shadow-sm flex flex-col gap-space-xs">
+<div class="flex items-center gap-2">
+<span class="material-symbols-outlined text-[20px] text-secondary-container">shield_with_heart</span>
+<span class="font-label-md text-label-md font-bold uppercase tracking-wider">Airbus Security Enclave</span>
+</div>
+<p class="font-body-sm text-body-sm text-primary-fixed mt-1 leading-relaxed">
+          Zero direct LLM code execution on host. Cloud Run operates on read-only pi-harness with in-process DuckDB isolation. Strict Model Armor filters screen user inputs and tool emissions.
+        </p>
+<div class="pt-space-xs flex items-center justify-between font-code-sm text-code-sm text-surface-container">
+<span>DO-178C Tool Traceability</span>
+<span class="text-secondary-container font-semibold">ENFORCED</span>
+</div>
+</div>
+</aside>
+</div>
+</div>
+<script>
+  // Interactive Filter & Search Script
+  document.addEventListener('DOMContentLoaded', () => {
+    const searchInput = document.getElementById('agentSearch');
+    const filterBadges = document.querySelectorAll('.filter-badge');
+    const statusButtons = document.querySelectorAll('.status-toggle-btn');
+    const divisionTags = document.querySelectorAll('.division-tag');
+    const agentCards = document.querySelectorAll('.agent-card');
+
+    let activeFilter = 'all';
+    let searchQuery = '';
+
+    function applyFilters() {
+      agentCards.forEach(card => {
+        const cardClassification = card.getAttribute('data-classification') || '';
+        const cardProgram = (card.getAttribute('data-program') || '').toLowerCase();
+        const cardText = card.innerText.toLowerCase();
+
+        const matchesClassification = (activeFilter === 'all') || (cardClassification === activeFilter);
+        const matchesSearch = searchQuery === '' || cardText.includes(searchQuery) || cardProgram.includes(searchQuery);
+
+        if (matchesClassification && matchesSearch) {
+          card.classList.remove('hidden');
+        } else {
+          card.classList.add('hidden');
+        }
+      });
+    }
+
+    if (searchInput) {
+      searchInput.addEventListener('input', (e) => {
+        searchQuery = e.target.value.toLowerCase().trim();
+        applyFilters();
+      });
+    }
+
+    filterBadges.forEach(btn => {
+      btn.addEventListener('click', () => {
+        filterBadges.forEach(b => {
+          b.classList.remove('bg-primary-container', 'text-on-primary');
+          b.classList.add('bg-surface-container-low', 'text-on-surface-variant');
+        });
+        btn.classList.remove('bg-surface-container-low', 'text-on-surface-variant');
+        btn.classList.add('bg-primary-container', 'text-on-primary');
+        activeFilter = btn.getAttribute('data-filter') || 'all';
+        applyFilters();
+      });
+    });
+
+    statusButtons.forEach(btn => {
+      btn.addEventListener('click', () => {
+        statusButtons.forEach(b => {
+          b.classList.remove('bg-primary-container', 'text-on-primary', 'font-semibold', 'shadow-sm');
+          b.classList.add('text-on-surface-variant');
+        });
+        btn.classList.add('bg-primary-container', 'text-on-primary', 'font-semibold', 'shadow-sm');
+        btn.classList.remove('text-on-surface-variant');
+      });
+    });
+
+    divisionTags.forEach(tag => {
+      tag.addEventListener('click', () => {
+        if (searchInput) {
+          searchInput.value = tag.innerText.trim();
+          searchQuery = tag.innerText.trim().toLowerCase();
+          applyFilters();
+        }
+      });
+    });
+
+    const refreshBtn = document.getElementById('refreshCatalogBtn');
+    if (refreshBtn) {
+      refreshBtn.addEventListener('click', () => {
+        const originalContent = refreshBtn.innerHTML;
+        refreshBtn.innerHTML = '<span class="material-symbols-outlined text-[18px] animate-spin">refresh</span><span>Syncing...</span>';
+        setTimeout(() => {
+          refreshBtn.innerHTML = '<span class="material-symbols-outlined text-[18px] text-secondary">check</span><span>Manifests Fresh</span>';
+          setTimeout(() => {
+            refreshBtn.innerHTML = originalContent;
+          }, 1800);
+        }, 1000);
+      });
+    }
+  });
+</script></main></div></body></html>
